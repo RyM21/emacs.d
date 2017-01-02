@@ -1,7 +1,7 @@
 (require-package 'unfill)
 
-(when (fboundp 'electric-pair-mode)
-  (electric-pair-mode))
+                                        ;(when (fboundp 'electric-pair-mode)
+                                        ;(electric-pair-mode))
 (when (eval-when-compile (version< "24.4" emacs-version))
   (electric-indent-mode 1))
 
@@ -9,7 +9,6 @@
 ;; Some basic preferences
 ;;----------------------------------------------------------------------------
 (setq-default
- blink-cursor-interval 0.4
  bookmark-default-file (expand-file-name ".bookmarks.el" user-emacs-directory)
  buffers-menu-max-size 30
  case-fold-search t
@@ -150,7 +149,7 @@
 ;;----------------------------------------------------------------------------
 ;; Rectangle selections, and overwrite text when the selection is active
 ;;----------------------------------------------------------------------------
-(cua-selection-mode t)                  ; for rectangles, CUA is nice
+                                        ;(cua-selection-mode t)                  ; for rectangles, CUA is nice
 
 
 ;;----------------------------------------------------------------------------
@@ -162,22 +161,22 @@
 (when (maybe-require-package 'avy)
   (global-set-key (kbd "C-;") 'avy-goto-word-or-subword-1))
 
-(require-package 'multiple-cursors)
+                                        ;(require-package 'multiple-cursors)
 ;; multiple-cursors
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-+") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+                                        ;(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+                                        ;(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+                                        ;(global-set-key (kbd "C-+") 'mc/mark-next-like-this)
+                                        ;(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 ;; From active region to multiple cursors:
-(global-set-key (kbd "C-c m r") 'set-rectangular-region-anchor)
-(global-set-key (kbd "C-c m c") 'mc/edit-lines)
-(global-set-key (kbd "C-c m e") 'mc/edit-ends-of-lines)
-(global-set-key (kbd "C-c m a") 'mc/edit-beginnings-of-lines)
+                                        ;(global-set-key (kbd "C-c m r") 'set-rectangular-region-anchor)
+                                        ;(global-set-key (kbd "C-c m c") 'mc/edit-lines)
+                                        ;(global-set-key (kbd "C-c m e") 'mc/edit-ends-of-lines)
+                                        ;(global-set-key (kbd "C-c m a") 'mc/edit-beginnings-of-lines)
 
 
 ;; Train myself to use M-f and M-b instead
-(global-unset-key [M-left])
-(global-unset-key [M-right])
+                                        ;(global-unset-key [M-left])
+                                        ;(global-unset-key [M-right])
 
 
 
