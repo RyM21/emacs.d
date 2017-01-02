@@ -66,7 +66,7 @@ typical word processor."
           (kill-local-variable 'buffer-face-mode-face))
         (buffer-face-mode 1)
         ;;(delete-selection-mode 1)
-        (set (make-local-variable 'blink-cursor-interval) 0.6)
+        (set (make-local-variable 'blink-cursor-interval) 0)
         (set (make-local-variable 'show-trailing-whitespace) nil)
         (flyspell-mode 1)
         (when (fboundp 'visual-line-mode)
