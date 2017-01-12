@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: wbsite
+# key: wb
+# --
+{{ site.wordbrewery }}
