@@ -1,6 +1,16 @@
+;;----------------------------------------------------------------------------
+;; Variables configured via the interactive 'customize' interface
+;;----------------------------------------------------------------------------
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+(when (file-exists-p custom-file)
+  (load custom-file))
+
 
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
+
 
 (let ((minver "23.3"))
   (when (version<= emacs-version minver)
@@ -9,6 +19,8 @@
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "wikipedia-this" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "amazon-this" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startup time
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
@@ -26,7 +38,6 @@
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-compat)
 (require 'init-utils)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
@@ -70,7 +81,7 @@
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-(require 'init-sessions)
+;; (require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
 
@@ -90,7 +101,6 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-(require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
 (require 'init-org)
@@ -100,11 +110,7 @@
 (require 'init-haml)
 (require 'init-python-mode)
 (unless (version<= emacs-version "24.3")
-  (require 'init-haskell))
-(require 'init-elm)
-(require 'init-ruby-mode)
-(require 'init-rails)
-(require 'init-sql)
+(require 'init-sql))
 
 (require 'init-lisp)
 (require 'init-slime)
@@ -124,11 +130,53 @@
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
-(require-package 'lua-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
+(require-package 'aggressive-indent)
+(require-package 'auto-indent-mode)
+(require-package 'css-comb)
+(require-package 'csv-mode)
+(require-package 'dired+)
+(require-package 'dired-sort)
+(require-package 'eslint-fix)
+(require-package 'exec-path-from-shell)
+(require-package 'flycheck-ledger)
+(require-package 'hackernews)
+(require-package 'guide-key)
+(require-package 'htmlize)
+(require-package 'indent-tools)
+(require-package 'indent-guide)
+(require-package 'js2-mode)
+(require-package 'json-mode)
+(require-package 'ledger-mode)
+(require-package 'js-comint)
+(require-package 'macrostep)
+(require-package 'mwe-log-commands)
+(require-package 'org-agenda-property)
+(require-package 'org-cliplink)
+(require-package 'org-gcal)
+(require-package 'password-vault)
+(require-package 'rainbow-mode)
+(require-package 'sass-mode)
+(require-package 'regex-tool)
+(require-package 'scss-mode)
+(require-package 'smart-shift)
+(require-package 'sql-indent)
+(require-package 'sync-recentf)
+(require-package 'tidy)
+(require-package 'undo-tree)
+(require-package 'tidy)
+(require-package 'whole-line-or-region)
+(require-package 'yaml-mode)
+(require-package 'gnus)
+
+
+;; Ryan's additions
+
+
 (when *is-a-mac*
   (require-package 'osx-location))
+
 (require-package 'regex-tool)
 
 ;;----------------------------------------------------------------------------
@@ -138,12 +186,6 @@
 (unless (server-running-p)
   (server-start))
 
-
-;;----------------------------------------------------------------------------
-;; Variables configured via the interactive 'customize' interface
-;;----------------------------------------------------------------------------
-(when (file-exists-p custom-file)
-  (load custom-file))
 
 
 ;;----------------------------------------------------------------------------
@@ -159,6 +201,7 @@
 
 
 (provide 'init)
+(require 'init-local)
 
 ;; Local Variables:
 ;; coding: utf-8

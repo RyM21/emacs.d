@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: em-dash
+# key: --
+# --
+—$1—$0
