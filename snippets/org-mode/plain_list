@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: plain_list
+# key: -
+# --
+- $1
+- $0

@@ -1,0 +1,18 @@
+#+begin_src  ledger :cmdline -s -M bal :results output :exports results :noweb yes
+%(org-read-date) %^{Payee}
+  {Expenses:Wendy's  $5.00
+  Liabilities:BOA
+#+end_src
+
+
+* %^{Please describe the task}
+:PROPERTIES:
+:CREATED: %u
+:END:
+%^{TODO}p
+%^{PRIORITY}p
+%^{EFFORT}p
+%^{SCHEDULED}p
+%^{DEADLINE}p
+
+(org-read-date)

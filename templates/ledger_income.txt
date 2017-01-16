@@ -1,0 +1,7 @@
+* %^{Please describe the source of the income|Paycheck}
+
+#+begin_src ledger :tangle ledger.dat :exports code :results output :noweb yes
+%t %\1
+  Assets:Checking:%^{USAA|LMCU|NCSECU}  $%^{Amount}
+  Income:%^{"Type of income?"|Salary|Gift|Rebate}:%^{"Means of income, e.g. 'paycheck'?"|Paycheck}
+#+end_src

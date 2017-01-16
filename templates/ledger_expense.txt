@@ -1,0 +1,7 @@
+* %^{Please name the payee} %^{Tags?||:waste:|:wb-expense:|:wb-taxes:|:add-to-splitwise:| :in-splitwise:|:writing-expense:|:job-search:|:moving-expense:|:unremibursed-law:|:reimbursed-law:}
+
+#+begin_src  ledger :tangle ledger.dat :exports code :results output :noweb yes
+%^t %\1
+  Expenses:%^{General category?|Food|Entertainment|Medical|Books|Business}:%^{More detail?}  $%^{Amount}
+  %^{Liabilities or assets?|Liabilities|Assets}:%^{Which account?|BOA Card|Chase Freedom|BarclayCard|USAA Visa|USAA Checking|LMCU Checking|Chase Slate|Capital One|Citi AA|Best Buy Card|NCSECU}
+#+end_src

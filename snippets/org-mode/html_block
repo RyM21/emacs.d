@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: html_block
+# key: #h
+# --
+#+begin_src html :tangle yes $1
+$0
+#+end_src
