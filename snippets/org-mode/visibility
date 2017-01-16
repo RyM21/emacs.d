@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: visibility
+# key: :V
+# --
+:VISIBILITY: $1
+$0

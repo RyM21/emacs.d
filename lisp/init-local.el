@@ -1,5 +1,22 @@
-(add-to-list 'load-path "~/src/org-mode/lisp")
-(add-to-list 'load-path "~/src/org-mode/contrib/lisp" t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(add-to-list 'load-path "~/.emacs.d/themes/color-theme-6.6.0/")
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "wikipedia-this" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "amazon-this" user-emacs-directory))
+
+
+(require 'lentic)
+(require 'lentic-server)
+(require 'smart-mode-line)
+(require 'smex)
+(require 'ledger-mode)
+(require 'yasnippet)
+
+(require 'xterm-color)
+(require 'ansi-color)
+(require 'color-theme)
+
+(color-theme-initialize)
 
 (custom-set-variables
  '(ansi-color-map
@@ -40,128 +57,16 @@
  '(inhibit-startup-screen t)
  '(initial-buffer-choice "~/notes/todo.org")
  '(initial-major-mode (quote org-mode))
- '(initial-scratch-message nil)
- '(org-after-todo-state-change-hook nil)
- '(org-agenda-before-write-hook
-   (quote
-    (org-agenda-add-entry-text org-carry-forward-uncompleted-tasks)))
- '(org-agenda-columns-compute-summary-properties nil)
- '(org-agenda-columns-show-summaries nil)
- '(org-agenda-compact-blocks t)
- '(org-agenda-deadline-faces
-   (quote
-    ((0.0)
-     (1.0 . org-warning)
-     (0.5 . org-upcoming-deadline)
-     (0.0 . default))))
- '(org-agenda-deadline-leaders (quote ("DUE:  " "Due in %3d d.: " "OVERDUE by %2d d.: ")))
- '(org-agenda-default-appointment-duration 60)
- '(org-agenda-files
-   (quote
-    ("~/notes/todo.org" "~/notes/wbblog.org" "~/notes/mobileorg.org" "~/notes/habits.org")))
- '(org-agenda-ignore-properties (quote (appt stats category)))
- '(org-agenda-inactive-leader "")
- '(org-agenda-mouse-1-follows-link t)
- '(org-agenda-prefix-format "")
- '(org-agenda-remove-tags t)
- '(org-agenda-scheduled-leaders (quote ("" "")))
- '(org-agenda-show-inherited-tags nil)
- '(org-agenda-skip-deadline-if-done t)
- '(org-agenda-skip-scheduled-if-done t)
- '(org-agenda-skip-timestamp-if-deadline-is-shown t)
- '(org-agenda-skip-timestamp-if-done t)
- '(org-agenda-skip-unavailable-files t)
- '(org-agenda-sorting-strategy
-   (quote
-    (todo-state-up deadline-down priority-down scheduled-up habit-up effort-up category-keep tag-up alpha-up)))
- '(org-agenda-span 7)
- '(org-agenda-start-on-weekday nil)
- '(org-agenda-start-with-clockreport-mode t)
- '(org-agenda-sticky nil)
- '(org-agenda-tags-todo-honor-ignore-options t)
- '(org-agenda-todo-keyword-format "")
- '(org-agenda-view-columns-initially t)
- '(org-agenda-window-setup (quote other-window))
- '(org-clone-delete-id t)
- '(org-closed-keep-when-no-todo t)
- '(org-deadline-warning-days 10)
- '(org-export-backends (quote (ascii beamer html icalendar latex md odt)))
- '(org-export-creator-string "")
- '(org-export-headline-levels 4)
- '(org-export-in-background t)
- '(org-export-with-archived-trees nil)
- '(org-export-with-author nil)
- '(org-export-with-drawers (quote (not "LOGBOOK" "PROPERTIES")))
- '(org-export-with-priority t)
- '(org-export-with-section-numbers nil)
- '(org-export-with-smart-quotes t)
- '(org-export-with-statistics-cookies nil)
- '(org-export-with-tags nil)
- '(org-export-with-timestamps (quote active))
- '(org-hide-leading-stars t)
- '(org-html-doctype "html")
- '(org-html-html5-fancy t)
- '(org-icalendar-combined-agenda-file "~/notes/org.ics")
- '(org-log-repeat nil)
- '(org-mobile-directory "~/notes")
- '(org-mobile-inbox-for-pull "~/notes/from-mobile.org")
- '(org-sort-agenda-noeffort-is-high nil)
- '(org-sort-agenda-notime-is-late nil)
- '(org-todo-keywords
-   (quote
-    ((sequence "NEXT(n)" "TODO(t)" "|" "DONE(x)" "DELEGATED(d)" "WAITING(w)" "SOMEDAY(s)" "NOT DOING(o)"))))
- '(org-todo-repeat-to-state "TODO")
- '(safe-local-variable-values (quote ((no-byte-compile t)))))
-
-(setq org-agenda-mouse-1-follows-link t)
-(setq org-agenda-skip-archived-trees t)
-(setq org-agenda-skip-deadline-if-done t)
-(setq org-agenda-skip-deadline-prewarning-if-scheduled nil)
-(setq org-agenda-skip-scheduled-if-done t)
-(setq org-agenda-skip-timestamp-if-deadline-is-shown t)
-(setq org-agenda-skip-scheduled-if-deadline-is-shown nil)
-(setq org-agenda-skip-timestamp-if-done t)
-(setq org-agenda-skip-unavailable-files t)
-                                        ;(setq org-agenda-sorting-strategy
-                                        ;'((agenda todo-state-down habit-down deadline-up priority-down scheduled-up time-up effort-up category-keep)
-                                        ;(todo todo-state-down habit-down deadline-up priority-down scheduled-up time-up effort-up category-keep)
-                                        ;(tags todo-state-down habit-down deadline-up priority-down scheduled-up time-up effort-up category-keep)
-                                        ;(search todo-state-down habit-down deadline-up priority-down scheduled-up time-up effort-up category-keep)))
-(setq org-agenda-span 7)
-(setq org-columns-default-format " %TODO %PRIORITY %ITEM %DEADLINE %EFFORT")
-
-(setq org-todo-keywords
-      (quote ((sequence "NEXT(n)" "TODO(t)" "|" "DONE(x)" "DELEGATED(d)" "WAITING(w)" "SOMEDAY(s)" "NOT DOING(o)"))))
-
-(setq org-todo-keyword-faces
-      (quote (("TODO" :foreground "red" :weight bold)
-              ("NEXT" :foreground "blue" :weight bold)
-              ("DONE" :foreground "forest green" :weight default)
-              ("WAITING" :foreground "orange" :weight default)
-              ("DELEGATED" :foreground "magenta" :weight default)
-              ("SOMEDAY" :foreground "gray" :weight default)
-              ("NOT DOING" :foreground "black" :weight default)
-              )))
-
-
-
-(setq org-tag-alist '((:startgroup . "Category")
-                      ("errand" . ?e)
-                      ("habit" . ?h)
-                      ("law" . ?l)
-                      ("WB" . ?w)
-                      ("personal" . ?p)
-                      ("reading" . ?r)
-                      ("writing" . ?i)
-                      ("resisting" . ?r) ;; This indicates that I am resisting or procrastinating on the task
-                      (:endgroup . "Category")))
-
+ '(initial-scratch-message nil))
 
 ;; Smart Mode Line
 
 (sml/setup)
 
 ;; Keybindings
+
+(global-unset-key (kbd "C-c r"))  ;; Allow C-c r as personal prefix key
+
 
 (global-set-key (kbd "<f9> c") 'calendar)
 (global-set-key (kbd "<f9> f") 'boxquote-insert-file)
@@ -183,7 +88,12 @@
 (global-set-key (kbd "M-s") 'save-buffer)
 (global-set-key (kbd "C-x C-m") 'save-macro)
 (global-set-key (kbd "C-c C-b") 'bookmark-set)
+(global-set-key (kbd "C-c r c") 'customize-face)
+(global-set-key (kbd "C-c r v") 'customize-variable)
 
+
+
+(yas-global-mode)
 
                                         ; Macros
 
@@ -231,22 +141,10 @@
   (local-set-key (kbd "C-c [") 'make-checkbox) ; Create a list item starting with a checkbox
   (local-set-key (kbd "C-c l") 'make-markdown-link) ; Surround line with single stars for emphasis
   (local-set-key (kbd "C-c 0") 'newlines-around-audio-tags) ; Surround line with single stars for emphasis
-  (require 'yasnippet)
-  (yas-global-mode)
   )
 
 
 (add-hook 'markdown-mode-hook 'my-markdown-mode-config)
-
-(require 'xterm-color)
-(require 'ansi-color)
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
-(add-to-list 'load-path "~/.emacs.d/themes/color-theme-6.6.0/")
-
-(require 'color-theme)
-(color-theme-initialize)
 
 (defun save-macro (name)
   "Take a name as argument
@@ -343,20 +241,6 @@
              (string= todo-state "NEXT") ) ;; todo-state equals "X"
           (org-deadline nil ".") )))))
 
-'(org-agenda-date ((t (:inherit org-agenda-structure :weight semi-bold :height 1.2))) t)
-'(org-date ((t (:foreground "Purple" :underline t :height 0.8 :family "Helvetica Neue"))))
-'(org-done ((t (:foreground "gray57" :weight light))))
-'(org-level-1 ((t (:weight semi-bold :height 1.1 :family "Helvetica Neue"))))
-'(org-level-2 ((t (:inherit outline-2 :weight semi-bold :height 1.1))))
-'(org-level-3 ((t (:inherit outline-3 :weight bold :family "Helvetica Neue"))))
-'(org-level-5 ((t (:inherit outline-5 :family "Helvetica Neue"))))
-'(org-link ((t (:inherit link :weight normal))))
-'(org-meta-line ((t (:inherit font-lock-comment-face :height 0.8))))
-'(org-property-value ((t (:height 0.9 :family "Helvetica Neue"))) t)
-'(org-special-keyword ((t (:inherit font-lock-keyword-face :height 0.8 :family "Helvetica Neue"))))
-'(org-table ((t (:foreground "dim gray" :height 0.9 :family "Menlo"))))
-'(org-tag ((t (:foreground "dark gray" :weight bold :height 0.8))))
-'(org-todo ((t (:foreground "#e67e22" :weight bold))))
 
 (setq org-agenda-custom-commands
       '(("A" "Agenda" agenda "" nil ("agenda.html" "agenda.txt" "agenda.ics"))
@@ -380,9 +264,12 @@ consistency graphs in all Org mode agendas.")
 
 
 
-
 (defun my-org-mode-config ()
+  (org-indent-mode 1)
   (local-set-key (kbd "C-x C-h 3") 'org-insert-third-level-star-headline)
+  (local-set-key (kbd "M-a") 'org-table-beginning-of-field)
+  (local-set-key (kbd "C-c r t") 'org-table-create)
+  (local-set-key (kbd "C-c C-k") 'kill-region)
   (local-set-key (kbd "M-r") 'org-refile)
   (local-set-key (kbd "<f8>") 'org-cycle-agenda-files)
   (local-set-key (kbd "C-<down>") 'org-move-subtree-down)
@@ -406,27 +293,88 @@ consistency graphs in all Org mode agendas.")
   (local-set-key (kbd "<f9> l") 'org-toggle-link-display)
   (local-set-key (kbd "C-c ,") 'org-demote-subtree)
   (local-set-key (kbd "C-c .") 'org-promote-subtree)
-  (require 'yasnippet)
-  (yas-global-mode)
-  (org-indent-mode 1)
-  )
+  (setq org-modules '(org-gnus org-id org-habit org-irc org-protocol org-eww org-bbdb org-choose org-depend))
 
+  )
 
 (add-hook 'org-mode-hook 'my-org-mode-config)
 
+(require 'font-lock)
+(require 'cc-mode)
+(c-after-font-lock-init)
+(setq org-export-with-smart-quotes t)
+(setq org-export-babel-evaluate nil)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (latex . t)
+   (shell . t)
+   (python . t)
+   (R . t)
+   (ruby . t)
+   (octave . t)
+   (sqlite . t)
+   (perl . t)
+   (org . t)
+   (makefile . t)
+   ))
+(setq org-src-preserve-indentation t)
+
+(require 'org)
 
 (defun send-agenda ()
   "Rebuild and export org-agenda files"
   (interactive)
   (setq inhibit-iso-escape-detection t)
   (setq org-export-with-broken-links t)
+  (setq org-export-with-smart-quotes t)
+  (org-icalendar-export-agenda-files)
   (find-file "~/notes/todo.org")
   (org-carry-forward-uncompleted-tasks) ;; See http://emacs.stackexchange.com/questions/5699/org-mode-trigger-todo-status-on-a-certain-date/5700#5700
   (org-store-agenda-views))
-                                        ;(org-icalendar-export-agenda-files)
+
 
                                         ;(eval-after-load "org"
                                         ;'(send-agenda))
 
 (load-theme 'RyanTheme)
+
+
+(make-variable-buffer-local 'hl-line-mode)
+(add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
+
+;; Keep global-font-lock-mode from turning on font-lock-mode
+(setq-local font-lock-global-modes (not 'org-mode))
+
+(setq-local hl-line-mode (not 'org-mode))
+
+
+(fset 'double-list-item
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("- OD" 0 "%d")) arg)))
+
+
+(setq org-edit-src-content-indentation 0)
+
+(progn
+  (autoload 'org-mobile-pull "org-mobile" nil t)
+  (autoload 'org-mobile-push "org-mobile" nil t))
+(progn
+  (setq org-mobile-directory "~/Dropbox/notes/orgmobile")
+  (setq org-mobile-inbox-for-pull "~/notes/notes.org")
+  (setq default-buffer-file-coding-system 'utf-8)
+  (setq org-mobile-files org-agenda-files)
+  (setq org-mobile-agendas org-agenda-files))
+
+;; BBDB
+
+(require 'bbdb)
+(bbdb-initialize)
+
+;; Pandoc
+(require 'pandoc)
+
+;; Ledger
+
+(add-to-list auto-mode-alist '("\\.dat$" . ledger-mode))
 (provide 'init-local)
+

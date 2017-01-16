@@ -1,0 +1,9 @@
+* %^{Please describe the task}
+:PROPERTIES:
+:CREATED: %u
+:END:
+%^{TODO}p
+%^{PRIORITY}p
+%^{EFFORT}p
+%^{SCHEDULED}p
+%^{DEADLINE}p

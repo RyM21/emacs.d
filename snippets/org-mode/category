@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: category
+# key: :C
+# --
+:CATEGORY: $1
+$0
