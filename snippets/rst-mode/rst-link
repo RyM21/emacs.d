@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: rst-link
+# key: l
+# binding: C-c C-l
+# expand-env: ((yas-indent-line nil))
+# --
+
+
+\`$1 <${2:`(print (yank))`}> $0\`
+

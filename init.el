@@ -1,24 +1,11 @@
-;;----------------------------------------------------------------------------
-;; Variables configured via the interactive 'customize' interface
-;;----------------------------------------------------------------------------
-
-(setq debug-on-error t)
-
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-
-(when (file-exists-p custom-file)
-  (load custom-file))
-
+;;; This file bootstraps the configuration, which is divided into
+;;; a number of other files.
 
 (add-to-list 'load-path "~/.emacs.d/elpa" t)
 (add-to-list 'load-path "~/.emacs.d/lisp" t)
 (add-to-list 'load-path "~/org-mode/lisp" t)
 (add-to-list 'load-path "~/org-mode/contrib/lisp" t)
 (add-to-list 'load-path "~/emacs/lisp" t)
-
-
-;;; This file bootstraps the configuration, which is divided into
-;;; a number of other files.
 
 
 (let ((minver "23.3"))
@@ -53,7 +40,24 @@
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
 ;;----------------------------------------------------------------------------
-(require 'init-preload-local nil t)
+                                        ;(require 'init-preload-local nil t)
+
+
+;;----------------------------------------------------------------------------
+;; Variables configured via the interactive 'customize' interface
+;;----------------------------------------------------------------------------
+
+(setq debug-on-error t)
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+;;----------------------------------------------------------------------------
+;; Allow users to provide an optional "init-local" containing personal settings
+;;----------------------------------------------------------------------------
+(require 'init-local nil)
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -76,12 +80,8 @@
 (require 'init-uniquify)
 (require 'init-ibuffer)
 (require 'init-flycheck)
-
 (require 'init-recentf)
 (require 'init-smex)
-;; If you really prefer ido to ivy, change the comments below. I will
-;; likely remove the ido config in due course, though.
-;; (require 'init-ido)
 (require 'init-ivy)
 (require 'init-hippie-expand)
 (require 'init-company)
@@ -192,13 +192,6 @@
   (server-start))
 
 
-
-;;----------------------------------------------------------------------------
-;; Allow users to provide an optional "init-local" containing personal settings
-;;----------------------------------------------------------------------------
-(require 'init-local nil t)
-
-
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
@@ -210,3 +203,6 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+
+(fset 'markdown-links-to-rst
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217848 118 114 47 114 101 112 108 97 tab return 92 91 40 46 42 41 92 93 92 40 40 backspace 40 44 backspace 46 42 41 92 41 return 96 92 49 32 60 92 50 62 96 return] 0 "%d")) arg)))

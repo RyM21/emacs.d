@@ -1,0 +1,2 @@
+Global list of TODO items of type: ALL
+Available with ‘N r’: (0)[ALL]

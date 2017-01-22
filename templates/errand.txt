@@ -1,9 +1,11 @@
-* %^{Please describe the task}
+* %^{Please describe the task|%c|%x|%i}
 :PROPERTIES:
 :CREATED: %u
+:FILE: %f
 :END:
 %^{TODO}p
 %^{PRIORITY}p
 %^{EFFORT}p
 %^{SCHEDULED}p
 %^{DEADLINE}p
+%^G

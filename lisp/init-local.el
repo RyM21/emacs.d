@@ -4,147 +4,40 @@
 (add-to-list 'load-path (expand-file-name "wikipedia-this" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "amazon-this" user-emacs-directory))
 
-
-(require 'lentic)
-(require 'lentic-server)
-(require 'smart-mode-line)
-(require 'smex)
-(require 'ledger-mode)
-(require 'yasnippet)
-
-(require 'xterm-color)
+(package-initialize)
 (require 'ansi-color)
-(require 'color-theme)
+(require 'bbdb)
+(require 'cc-mode)
+(require 'font-lock)
+(require 'init-functions)
+(require 'init-keybindings)
+(require 'init-macros)
+(require 'jedi)
+(require 'js3-mode)
+(require 'ledger-mode)
+(require 'lentic)
+(require 'markdown-mode)
+(require 'org)
+(require 'pandoc)
+(require 'smex)
+(require 'sphinx-mode)
+(require 'visual-regexp-steroids)
+(require 'xterm-color)
+(require 'yasnippet)
 
 (color-theme-initialize)
 
-(custom-set-variables
- '(ansi-color-map
-   [default default default italic underline success warning error nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil
-     (foreground-color . "black")
-     (foreground-color . "#d55e00")
-     (foreground-color . "#009e73")
-     (foreground-color . "#f8ec59")
-     (foreground-color . "#0072b2")
-     (foreground-color . "#cc79a7")
-     (foreground-color . "#56b4e9")
-     (foreground-color . "white")
-     nil nil
-     (background-color . "black")
-     (background-color . "#d55e00")
-     (background-color . "#009e73")
-     (background-color . "#f8ec59")
-     (background-color . "#0072b2")
-     (background-color . "#cc79a7")
-     (background-color . "#56b4e9")
-     (background-color . "white")
-     nil nil] t)
- '(auth-source-protocols
-   (quote
-    (quote
-     (quote
-      ((imap "imap" "imaps" "143" "993" "995")
-       (pop3 "pop3" "pop" "pop3s" "110" "995" "993")
-       (ssh "ssh" "22")
-       (sftp "sftp" "115")
-       (smtp "smtp" "25" "587"))))))
- '(company-auto-complete (quote (quote (quote (quote company-explicit-action-p)))))
-
- '(diary-entry-marker (quote (quote (quote font-lock-variable-name-face))))
- '(gnus-logo-colors (quote (quote (quote ("#528d8d" "#c0c0c0")))))
- '(inhibit-startup-buffer-menu t)
- '(inhibit-startup-echo-area-message "ryan")
- '(inhibit-startup-screen t)
- '(initial-buffer-choice "~/notes/todo.org")
- '(initial-major-mode (quote org-mode))
- '(initial-scratch-message nil))
+(add-to-list 'auto-mode-alist '("\\.dat$" . ledger-mode))
 
 ;; Smart Mode Line
 
 (sml/setup)
 
-;; Keybindings
 
-(global-unset-key (kbd "C-c r"))  ;; Allow C-c r as personal prefix key
-
-
-(global-set-key (kbd "<f9> c") 'calendar)
-(global-set-key (kbd "<f9> f") 'boxquote-insert-file)
-(global-set-key (kbd "<f9> g") 'gnus)
-(global-set-key (kbd "<f9> r") 'boxquote-region)
-(global-set-key (kbd "<f9> v") 'visible-mode)
-(global-set-key (kbd "C-c +") 'text-scale-increase)
-(global-set-key (kbd "C-c -") 'text-scale-decrease)
-(global-set-key (kbd "C-c C-f") 'backward-kill-word)
-(global-set-key (kbd "C-c C-k") 'kill-region)
-(global-set-key (kbd "C-c C-o") 'other-window)
-(global-set-key (kbd "C-c C-w") 'kill-word)
-(global-set-key (kbd "C-c q") 'delete-indentation)
-(global-set-key (kbd "C-o") 'other-window)
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-w") 'backward-kill-word)
-(global-set-key (kbd "C-k" ) 'kill-line)
-(global-set-key (kbd "M-s") 'save-buffer)
-(global-set-key (kbd "M-s") 'save-buffer)
-(global-set-key (kbd "C-x C-m") 'save-macro)
-(global-set-key (kbd "C-c C-b") 'bookmark-set)
-(global-set-key (kbd "C-c r c") 'customize-face)
-(global-set-key (kbd "C-c r v") 'customize-variable)
-
-
+(load-theme 'RyanTheme t nil)
 
 (yas-global-mode)
 
-                                        ; Macros
-
-;; Global
-
-(global-set-key (kbd "C-M-s") 'section-sign-plus-nonbreaking-space)
-(global-set-key (kbd "C-M-.") 'add-ellipsis)
-(global-set-key (kbd "C-M--") 'insert-em-dash)
-
-;; RST-mode
-(defun my-rst-mode-config ()
-  "For use in rst-mode-hook."
-  (local-set-key (kbd "C-x C-h 1") 'sphinx-first-level-heading)
-  (local-set-key (kbd "C-x C-h 2") 'sphinx-second-level-heading)
-  (local-set-key (kbd "C-x C-h 3") 'sphinx-third-level-heading)
-  (local-set-key (kbd "C-c 8") 'add-star-emphasis) ; Surround line with single stars for emphasis
-  (local-set-key (kbd "C-c *") 'add-star-emphasis) ; Surround line with single stars for emphasis
-  (local-set-key (kbd "C-x -") 'make-list-item) ; Make informal list item within org structure
-  (local-set-key (kbd "C-c [") 'make-checkbox) ; Create a list item starting with a checkbox
-  )
-;; add to hook
-(eval-after-load "rst-mode"
-  '(add-hook 'rst-mode-hook 'my-rst-mode-config))
-
-;; HTML Mode
-
-(defun my-html-mode-config ()
-  "For use in html-mode-hook."
-  (local-set-key (kbd "C-c C-l") 'html-li) ; li tag macro
-  (local-set-key (kbd "<C-right>") 'sgml-skip-tag-forward) ; add a key
-  (local-set-key (kbd "<C-left>") 'sgml-skip-tag-backward) ; add a key
-  (local-set-key (kbd "C-c l") 'html-link-to-markdown) ; change HTML link to Markdown link
-  )
-
-;; add to hook
-(add-hook 'html-mode-hook 'my-html-mode-config)
-
-;; Markdown Mode
-
-(defun my-markdown-mode-config ()
-  "For use in markdown-mode-hook."
-  (local-set-key (kbd "C-c 8") 'add-star-emphasis) ; Surround line with single stars for emphasis
-  (local-set-key (kbd "C-c *") 'add-star-emphasis) ; Surround line with single stars for emphasis
-  (local-set-key (kbd "C-x -") 'make-list-item) ; Create a list item starting with a hyphen as bullet
-  (local-set-key (kbd "C-c [") 'make-checkbox) ; Create a list item starting with a checkbox
-  (local-set-key (kbd "C-c l") 'make-markdown-link) ; Surround line with single stars for emphasis
-  (local-set-key (kbd "C-c 0") 'newlines-around-audio-tags) ; Surround line with single stars for emphasis
-  )
-
-
-(add-hook 'markdown-mode-hook 'my-markdown-mode-config)
 
 (defun save-macro (name)
   "Take a name as argument
@@ -163,58 +56,8 @@
 (defadvice paredit-mode (around undo/disable activate))
 
 
-(fset 'sphinx-first-level-heading
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 up 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 1 down down 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 1 down return up] 0 "%d")) arg)))
-
-
-(fset 'sphinx-second-level-heading
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 up 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 down return 1 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 return 1 up down up down] 0 "%d")) arg)))
-
-
-(fset 'sphinx-third-level-heading
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 up 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 down return 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 126 return 1] 0 "%d")) arg)))
-
-
-(fset 'html-li
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 60 108 105 62 5 60 47 108 105 62 1 down] 0 "%d")) arg)))
-
 (setq auto-fill-mode nil)
 (setq visual-line-mode t)
-
-(fset 'add-star-emphasis
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("**" 0 "%d")) arg)))
-
-
-(fset 'make-list-item
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 45 32 down 1] 0 "%d")) arg)))
-
-
-(fset 'make-markdown-link
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("\342[]()" 0 "%d")) arg)))
-
-
-(fset 'newlines-around-audio-tags
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([19 97 117 100 105 111 return 1 return down down down return] 0 "%d")) arg)))
-
-
-(fset 'make-checkbox
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("- [ ] " 0 "%d")) arg)))
-
-
-(fset 'section-sign-plus-nonbreaking-space
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217848 up return up up return 134217848 up return up up return] 0 "%d")) arg)))
-
-
-(fset 'section-sign-plus-nonbreaking-space
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217848 107 backspace 105 110 115 101 114 116 45 99 104 97 114 return 115 101 99 116 105 111 110 32 115 105 103 110 return 134217848 105 110 115 101 114 116 45 99 104 97 114 return 110 111 110 45 98 114 101 97 107 105 110 103 45 backspace 32 115 112 97 99 101 return] 0 "%d")) arg)))
-
-(fset 'insert-em-dash
-      (lambda (&optional arg) "Keyboard macro" (interactive "p") (kmacro-exec-ring-item (quote ([134217848 105 110 115 101 114 116 45 99 104 97 114 return 69 77 33554464 68 65 83 72 return] 0 "%d")) arg)))
-
-
-(fset 'html-link-to-markdown
-      (lambda (&optional arg) "Keyboard macro" (interactive "p") (kmacro-exec-ring-item (quote ([19 104 114 101 102 61 right 32 backspace 33554464 backspace 67108896 19 34 left 134217847 up right return up 109 100 tab backspace backspace backspace 45 32 91 73 backspace 32 93 40 25 41 down 19 62 right left S-right S-right S-right S-right S-right S-right S-right left left left left left left left 67108896 67108896 up down 67108896 19 60 left 134217847 up 1 19 41 18 40 backspace backspace 40 backspace backspace backspace 40 left left backspace 25 right right right right right right right right right right right right right right right right right right right right right right right right right right right right right left left left left left left left left left left left left left left left left 5 return] 0 "%d")) arg)))
-
 
 (defun org-carry-forward-uncompleted-tasks ()
   "Carry forward uncompleted tasks."
@@ -249,10 +92,8 @@
         ("E" "Errands" tags-todo "errands" nil ("errands.html" "errands.txt" "errands.ics"))
         ("W" "WordBrewery" tags-todo "WB" nil ("WBtasks.html" "WBtasks.txt" "WBcal.ics"))))
 
-(defvar my/org-habit-show-graphs-everywhere nil
-  "If non-nil, show habit graphs in all types of agenda buffers.
-
-Normally, habits display consistency graphs only in
+(defvar my/org-habit-show-graphs-everywhere t
+  "Normally, habits display consistency graphs only in
 \"agenda\"-type agenda buffers, not in other types of agenda
 buffers.  Set this variable to any non-nil variable to show
 consistency graphs in all Org mode agendas.")
@@ -264,43 +105,6 @@ consistency graphs in all Org mode agendas.")
 
 
 
-(defun my-org-mode-config ()
-  (org-indent-mode 1)
-  (local-set-key (kbd "C-x C-h 3") 'org-insert-third-level-star-headline)
-  (local-set-key (kbd "M-a") 'org-table-beginning-of-field)
-  (local-set-key (kbd "C-c r t") 'org-table-create)
-  (local-set-key (kbd "C-c C-k") 'kill-region)
-  (local-set-key (kbd "M-r") 'org-refile)
-  (local-set-key (kbd "<f8>") 'org-cycle-agenda-files)
-  (local-set-key (kbd "C-<down>") 'org-move-subtree-down)
-  (local-set-key (kbd "C-<up>") 'org-move-subtree-up)
-  (local-set-key (kbd "C-c a") 'org-agenda)
-  (local-set-key (kbd "C-c C-d") 'org-deadline)
-  (local-set-key (kbd "C-c d") 'org-deadline)
-  (local-set-key (kbd "M-<f9>") 'org-toggle-inline-images)
-  (local-set-key (kbd "M-<up>") 'org-move-subtree-up)
-  (local-set-key (kbd "C-c [") 'make-checkbox) ;; Create a list item starting with a checkbox
-  (local-set-key (kbd "C-c C-,") 'org-demote-subtree)
-  (local-set-key (kbd "C-c C-.") 'org-promote-subtree)
-  (local-set-key (kbd "C-c l") 'org-insert-link-global)
-  (local-set-key (kbd "C-c o") 'org-open-at-point-global)
-  (local-set-key (kbd "C-x -") 'make-list-item) ;; Make informal list item within org structure
-  (global-set-key (kbd "<f12>") 'org-agenda)
-  (global-set-key (kbd "C-c c") 'org-capture)
-  (local-set-key (kbd "M-<down>") 'org-move-subtree-down)
-  (global-set-key (kbd "M-c") 'org-capture)
-  (global-set-key (kbd "M-p") 'org-capture)
-  (local-set-key (kbd "<f9> l") 'org-toggle-link-display)
-  (local-set-key (kbd "C-c ,") 'org-demote-subtree)
-  (local-set-key (kbd "C-c .") 'org-promote-subtree)
-  (setq org-modules '(org-gnus org-id org-habit org-irc org-protocol org-eww org-bbdb org-choose org-depend))
-
-  )
-
-(add-hook 'org-mode-hook 'my-org-mode-config)
-
-(require 'font-lock)
-(require 'cc-mode)
 (c-after-font-lock-init)
 (setq org-export-with-smart-quotes t)
 (setq org-export-babel-evaluate nil)
@@ -308,19 +112,12 @@ consistency graphs in all Org mode agendas.")
  'org-babel-load-languages
  '(
    (latex . t)
-   (shell . t)
    (python . t)
-   (R . t)
-   (ruby . t)
-   (octave . t)
+   (ledger . t)
    (sqlite . t)
-   (perl . t)
    (org . t)
-   (makefile . t)
    ))
 (setq org-src-preserve-indentation t)
-
-(require 'org)
 
 (defun send-agenda ()
   "Rebuild and export org-agenda files"
@@ -334,8 +131,8 @@ consistency graphs in all Org mode agendas.")
   (org-store-agenda-views))
 
 
-                                        ;(eval-after-load "org"
-                                        ;'(send-agenda))
+(eval-after-load "org"
+'(send-agenda))
 
 (load-theme 'RyanTheme)
 
@@ -345,36 +142,27 @@ consistency graphs in all Org mode agendas.")
 
 ;; Keep global-font-lock-mode from turning on font-lock-mode
 (setq-local font-lock-global-modes (not 'org-mode))
-
 (setq-local hl-line-mode (not 'org-mode))
-
-
-(fset 'double-list-item
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("- OD" 0 "%d")) arg)))
-
-
 (setq org-edit-src-content-indentation 0)
 
 (progn
   (autoload 'org-mobile-pull "org-mobile" nil t)
   (autoload 'org-mobile-push "org-mobile" nil t))
-(progn
-  (setq org-mobile-directory "~/Dropbox/notes/orgmobile")
-  (setq org-mobile-inbox-for-pull "~/notes/notes.org")
-  (setq default-buffer-file-coding-system 'utf-8)
-  (setq org-mobile-files org-agenda-files)
-  (setq org-mobile-agendas org-agenda-files))
 
 ;; BBDB
 
-(require 'bbdb)
 (bbdb-initialize)
 
 ;; Pandoc
-(require 'pandoc)
 
 ;; Ledger
 
-(add-to-list auto-mode-alist '("\\.dat$" . ledger-mode))
-(provide 'init-local)
+;; Suppress warnings
+;;
+;; See https://goo.gl/xkZAfA
 
+
+
+
+
+(provide 'init-local)

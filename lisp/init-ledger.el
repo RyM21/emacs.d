@@ -1,6 +1,7 @@
 (require-package 'ledger-mode)
 
 (add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
+(add-to-list 'auto-mode-alist '("\\.dat$" . ledger-mode))
 
 (when (maybe-require-package 'flycheck-ledger)
   (after-load 'flycheck

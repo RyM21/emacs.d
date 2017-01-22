@@ -1,0 +1,8 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+X-WR-CALNAME:Ryan's Org Calendar
+PRODID:-//Ryan McCarl//Emacs with Org mode//EN
+X-WR-TIMEZONE:America/Denver
+X-WR-CALDESC:Ryan's Org Calendar
+CALSCALE:GREGORIAN
+END:VCALENDAR

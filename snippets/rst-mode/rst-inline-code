@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rst-inline-code
+# key: :c
+# binding: C-c c
+# expand-env: ((yas-indent-line nil))
+# --
+:${1:code}:\`${2:`(print (yank))`}\` $0

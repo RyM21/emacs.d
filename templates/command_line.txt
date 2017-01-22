@@ -1,0 +1,6 @@
+* %^{Please enter the shell command you want to save|%c|%x|%i}
+:PROPERTIES:
+:CREATED: %u
+:FILE: %f
+:END:
+%^G
