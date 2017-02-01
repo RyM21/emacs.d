@@ -1,18 +1,15 @@
+
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
-
-(add-to-list 'load-path "~/.emacs.d/elpa" t)
-(add-to-list 'load-path "~/.emacs.d/lisp" t)
-(add-to-list 'load-path "~/org-mode/lisp" t)
-(add-to-list 'load-path "~/org-mode/contrib/lisp" t)
-(add-to-list 'load-path "~/emacs/lisp" t)
-
 
 (let ((minver "23.3"))
   (when (version<= emacs-version minver)
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
 (when (version<= emacs-version "24")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'init-benchmarking) ;; Measure startup time
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -29,35 +26,19 @@
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-compat)
 (require 'init-utils)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 ;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
-(require 'init-benchmarking) ;; Measure startup time
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
 ;;----------------------------------------------------------------------------
-                                        ;(require 'init-preload-local nil t)
-
-
-;;----------------------------------------------------------------------------
-;; Variables configured via the interactive 'customize' interface
-;;----------------------------------------------------------------------------
-
-(setq debug-on-error t)
-
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-
-(when (file-exists-p custom-file)
-  (load custom-file))
-
-;;----------------------------------------------------------------------------
-;; Allow users to provide an optional "init-local" containing personal settings
-;;----------------------------------------------------------------------------
-(require 'init-local nil)
+(setq package-selected-packages nil)
+(require 'init-preload-local nil t)
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
@@ -67,12 +48,12 @@
 (require-package 'project-local-variables)
 (require-package 'diminish)
 (require-package 'scratch)
-(require-package 'mwe-log-commands)
+;(require-package 'mwe-log-commands)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
-(require 'init-osx-keys)
+;(require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-dired)
 (require 'init-isearch)
@@ -80,13 +61,17 @@
 (require 'init-uniquify)
 (require 'init-ibuffer)
 (require 'init-flycheck)
+
 (require 'init-recentf)
 (require 'init-smex)
+;; If you really prefer ido to ivy, change the comments below. I will
+;; likely remove the ido config in due course, though.
+;; (require 'init-ido)
 (require 'init-ivy)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-;; (require 'init-sessions)
+;(require 'init-sessions)
 (require 'init-fonts)
 (require 'init-mmm)
 
@@ -106,6 +91,7 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
+(require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
 (require 'init-org)
@@ -115,10 +101,14 @@
 (require 'init-haml)
 (require 'init-python-mode)
 (unless (version<= emacs-version "24.3")
-(require 'init-sql))
+  (require 'init-haskell))
+(require 'init-elm)
+(require 'init-ruby-mode)
+(require 'init-rails)
+(require 'init-sql)
 
+(require 'init-paredit)
 (require 'init-lisp)
-(require 'init-slime)
 (unless (version<= emacs-version "24.2")
   (require 'init-clojure)
   (require 'init-clojure-cider))
@@ -135,53 +125,11 @@
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
+(require-package 'lua-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
-(require-package 'aggressive-indent)
-(require-package 'auto-indent-mode)
-(require-package 'css-comb)
-(require-package 'csv-mode)
-(require-package 'dired+)
-(require-package 'dired-sort)
-(require-package 'eslint-fix)
-(require-package 'exec-path-from-shell)
-(require-package 'flycheck-ledger)
-(require-package 'hackernews)
-(require-package 'guide-key)
-(require-package 'htmlize)
-(require-package 'indent-tools)
-(require-package 'indent-guide)
-(require-package 'js2-mode)
-(require-package 'json-mode)
-(require-package 'ledger-mode)
-(require-package 'js-comint)
-(require-package 'macrostep)
-(require-package 'mwe-log-commands)
-(require-package 'org-agenda-property)
-(require-package 'org-cliplink)
-(require-package 'org-gcal)
-(require-package 'password-vault)
-(require-package 'rainbow-mode)
-(require-package 'sass-mode)
-(require-package 'regex-tool)
-(require-package 'scss-mode)
-(require-package 'smart-shift)
-(require-package 'sql-indent)
-(require-package 'sync-recentf)
-(require-package 'tidy)
-(require-package 'undo-tree)
-(require-package 'tidy)
-(require-package 'whole-line-or-region)
-(require-package 'yaml-mode)
-(require-package 'gnus)
-
-
-;; Ryan's additions
-
-
 (when *is-a-mac*
   (require-package 'osx-location))
-
 (require-package 'regex-tool)
 
 ;;----------------------------------------------------------------------------
@@ -193,16 +141,27 @@
 
 
 ;;----------------------------------------------------------------------------
+;; Variables configured via the interactive 'customize' interface
+;;----------------------------------------------------------------------------
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+
+;;----------------------------------------------------------------------------
+;; Allow users to provide an optional "init-local" containing personal settings
+;;----------------------------------------------------------------------------
+(require 'init-local nil t)
+
+
+;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
+
+
 (provide 'init)
-(require 'init-local)
 
 ;; Local Variables:
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
-
-(fset 'markdown-links-to-rst
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217848 118 114 47 114 101 112 108 97 tab return 92 91 40 46 42 41 92 93 92 40 40 backspace 40 44 backspace 46 42 41 92 41 return 96 92 49 32 60 92 50 62 96 return] 0 "%d")) arg)))

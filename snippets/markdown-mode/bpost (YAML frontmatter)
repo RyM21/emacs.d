@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: blogpost
+# key: bpost
+# --
+---
+layout: post
+title: "$1"
+description: "$2"
+category: $3
+featured: true
+published: false
+image: $4
+---
+

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: org-habit
+# key: hb
+# --
+** TODO [#A] ${1:taskname}
+   SCHEDULED: 
+   :PROPERTIES:
+   :STYLE: habit
+   :END:
+

@@ -22,7 +22,6 @@
 (require 'smex)
 (require 'sphinx-mode)
 (require 'visual-regexp-steroids)
-(require 'xterm-color)
 (require 'yasnippet)
 
 (color-theme-initialize)

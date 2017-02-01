@@ -1,0 +1,731 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fb_a",
+				"fb_admins"
+			],
+			[
+				"tr",
+				"tr	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wordbrewery-jekyll",
+			"settings":
+			{
+				"buffer_size": 88,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog_word_entry",
+			"settings":
+			{
+				"buffer_size": 223,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rss+email_markdown",
+			"settings":
+			{
+				"buffer_size": 360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog_sentence_entry",
+			"settings":
+			{
+				"buffer_size": 212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spanishfund",
+			"settings":
+			{
+				"buffer_size": 88,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "email",
+			"settings":
+			{
+				"buffer_size": 466,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blogpost",
+			"settings":
+			{
+				"buffer_size": 193,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/ryan/Downloads/wb-log!.log",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/WB_Spanish_frequency_2016-09-05.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/WB_es_old_lemmatized.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/WB_es_old_non_lemmas.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/WB_es.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/WB_es_old.txt",
+		"/Users/ryan/Dropbox/@WordBrewery/financial_modeling_business_plan_transcript",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/archive/spanish_lemma_py_dict.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/archive/Low_Intermediate_Latin_Amer_Spanish_Sentences_TTS_accurate.apkg",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/rst_template.rst",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/WB_Chinese_Simplified_Char_Frequency_2016-09-02",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/chinese_japanese_character_scoring.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/index.rst",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Spanish/WB_Spanish_sentences_done.csv",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/heisig_hanzi_list_characters_only.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/HSK_characters_ordered.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/HSK_chars_only.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/heisig_remembering_the_hanzi_keyword_list.csv",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/jekyll_resources.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-30-what-is-nlp.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-09-01-the-definitive-kanji-frequency-list.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-09-01-wordbrewery-spanish-core-anki-deck.md",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/Chinese_Subtlex_subtitles_character_frequency.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/Jun_Da_MCC.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/JunDa-CharFreq-Modern.xls",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/Chinese_Leeds_Internet_Characters.txt",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Chinese/Chih-Hao_Tsai_hanzi_frequency_and_stroke_count.csv",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/README.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/docs_style_guide.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/sentence_scoring_algorithm.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/responsive_design_resources.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/sentences/sentence_scoring_algorithm.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/Makefile",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/README.md",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/conf.py",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/design/usability.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/# OneSentence template.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/CSS3_responsive_design_resources.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/Blog_Design_Description.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/source/usability.rst",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_layouts/post.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_sass/_posts.scss",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_sass/_layout.scss",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_sass/_reset.scss",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes/_share.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-18-spanish-fundamentals-3.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes/head.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_config.yml",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-06-14-welcome-to-wordbrewery.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-29-reading-japanese-katakana-2.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-06-15-one-sentence-at-a-time.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-06-15-how-wordbrewery-teaches-vocabulary-in-context.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-06-30-what-languages-should-learn-summer.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-16-pareto-principle-and-language-learning.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-12-reading-japanese-katakana-1.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-06-spanish-fundamentals-2.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-07-31-introducing-reading-japanese.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-07-27-spanish-fundamentals-1.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-07-16-native-audio-for-spanish.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-06-17-spanish-fundamentals-introduction.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-30-reading-japanese-katakana-2.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-25-what-is-nlp.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/img/post-features/Japan.GoldenPalace.jpg",
+		"/Users/ryan/.Trash/2016-08-29-japanese-katakana-2.txt",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-29-japanese-katakana-2.txt",
+		"/Users/ryan/Dropbox/@WordBrewery/docs/md_to_rst.py",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes/footer.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/spanish/spanish-fundamentals-introduction/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/spanish/spanish-fundamentals-3/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/spanish/spanish-fundamentals-2/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/spanish/spanish-fundamentals-1/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/spanish/native-audio-for-spanish/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/learning/what-languages-should-learn-summer/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/learning/welcome-to-wordbrewery/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/learning/pareto-principle-and-language-learning/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/learning/one-sentence-at-a-time/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/learning/how-wordbrewery-teaches-vocabulary-in-context/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/japanese/reading-japanese-katakana-1/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/japanese/introducing-reading-japanese/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_site/english/what-is-a-direct-object/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/Slack posts to answer",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-25-japanese_katakana_2.txt",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes/share.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes/sp_fund_posts.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes/bug_images_1.html",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Japanese/jdict.xml",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Japanese/KWAT.csv",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Japanese/edictutf-8.csv",
+		"/Users/ryan/Dropbox/@Artyom/frequencyLists/Japanese/edictutf-8-shorter.csv",
+		"/Users/ryan/wordbrewery/spa/src/app/routes/explore/sentenceBlender.ts",
+		"/Users/ryan/wordbrewery/spa/src/app/routes/explore/sentenceBlender.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-18-what-is-a-direct-object.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_layouts/default.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-08-17-spanish-fundamentals-3.md",
+		"/Users/ryan/Dropbox/Law/@DTTC/This memo addresses four questions raised by rece",
+		"/Users/ryan/Dropbox/@DTTC/In line with what I outlined earlier today, see be",
+		"/Users/ryan/Dropbox/Law/@DTTC/DTTC - SEC talking points 2016-08-12 2",
+		"/Users/ryan/Dropbox/@DTTC/DTTC - summary of settled PCAOB disciplinary",
+		"/Users/ryan/Dropbox/@DTTC/DTTC - PCAOB talking points",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_sass/_variables.scss",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/slick/slick-theme.scss",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/slick/slick-theme.css",
+		"/Users/ryan/Dropbox/Law/LenoxFFOnotes.md",
+		"/Users/ryan/Dropbox/Law/LenoxFFOdumpfile.txt",
+		"/Users/ryan/Dropbox/Law/LenoxFFO.md",
+		"/Users/ryan/Dropbox/Law/Maryland statute of limitations research 2016-04-24.rtf",
+		"/Users/ryan/Dropbox/Law/Lenox res judicata brief section 2016-04-24.txt",
+		"/Users/ryan/Dropbox/Law/Lenox res judicata brief section 2016-04-24",
+		"/Users/ryan/Dropbox/Law/LenoxFFO.txt",
+		"/Users/ryan/Dropbox/Law/Res Judicata Brief.docx",
+		"/Users/ryan/Dropbox/Law/Lenox res judicata brief section 2016-05-11.docx",
+		"/Users/ryan/Dropbox/Law/Lenox responses.docx",
+		"/Users/ryan/Dropbox/Law/lenoxprivitynotes",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-07-26-spanish-fundamentals-1.md",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts/2016-07-28-spanish-fundamentals-2.md",
+		"/Users/ryan/wordbrewery/spa/src/index.html",
+		"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/img/post-features/SpanishGuanaguatoatNight.jpg",
+		"/Users/ryan/Dropbox/notes/2016-07-25-spanish-fundamentals-1.md",
+		"/Users/ryan/wordbrewery/spa/src/styles/main.scss",
+		"/Users/ryan/wordbrewery/spa/src/app/routes/layout/layout.html",
+		"/Users/ryan/wordbrewery/spa/src/app/routes/account/activate/activate.ts",
+		"/Users/ryan/wordbrewery/spa/src/app/routes/account/account-created/acc-created.html",
+		"/Users/ryan/Dropbox/@Artyom/Find Results",
+		"/Users/ryan/Dropbox/@Artyom/encodingsetup.py",
+		"/Users/ryan/Dropbox/@Artyom/csv_to_db.py",
+		"/Users/ryan/Dropbox/@Artyom/languagedb.py",
+		"/Users/ryan/Dropbox/@Artyom/kanatutor/kanatutor.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog",
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_includes",
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog",
+			"/Users/ryan/wordbrewery",
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts",
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/",
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog/_posts",
+			"/Users/ryan/Dropbox/@WordBrewery/Blog/wordbrewery-blog",
+			"/Users/ryan/wordbrewery",
+			"/Users/ryan/wordbrewery/assets",
+			"/Users/ryan/wordbrewery/spa",
+			"/Users/ryan/wordbrewery",
+			"/Users/ryan/wordbrewery/spa/src",
+			"/Users/ryan/wordbrewery/.idea",
+			"/Users/ryan/wordbrewery/assets/scss",
+			"/Users/ryan/wordbrewery/typings",
+			"/Users/ryan/wordbrewery/src",
+			"/Users/ryan/wordbrewery/spa",
+			"/Users/ryan/wordbrewery/assets",
+			"/Users/ryan/wordbrewery/spa",
+			"/Users/ryan/wordbrewery/assets",
+			"/Users/ryan/wordbrewery",
+			"~/.emacs.d"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"york",
+			"ellos",
+			"ello",
+			"trabajo",
+			"pasar",
+			"amigo",
+			"oir",
+			"haber",
+			"hay",
+			"que",
+			"crear",
+			"\\w$\\n",
+			"\\w$",
+			" \\d+",
+			"supon",
+			"cosa",
+			"senor",
+			"estar",
+			"ser",
+			"a",
+			" \\d+",
+			" +",
+			"[，,]",
+			"\\t.*",
+			",",
+			"\\d+\\t(\\w)\\t\\d+$",
+			".*?(\\w).*?\\d+$",
+			".*?(\\w)$",
+			" +",
+			"(\\w),\\d+,(\\d+)",
+			" +",
+			"- ",
+			"logo",
+			"SOURCE",
+			"nump",
+			"make",
+			"sys",
+			"direct",
+			"p {",
+			"column",
+			"display",
+			"max-wi",
+			"blockq",
+			"margin",
+			"em",
+			",em",
+			"em ",
+			"em",
+			"max-width",
+			"width",
+			"32",
+			"width",
+			"32",
+			"blockquote",
+			"line",
+			"audio",
+			"title",
+			"site",
+			"og:image",
+			"image",
+			"page.image",
+			"image",
+			"Ryan McCarl",
+			"Mc",
+			"author",
+			"ryan",
+			"mcc",
+			"autho",
+			"Ryan",
+			"Ryan Mc",
+			"summary_large",
+			"url",
+			"og",
+			"blockquote",
+			"surv",
+			"survey",
+			"img",
+			"Jpapan",
+			"maintain",
+			"img",
+			"width",
+			"database along",
+			"japanese",
+			"out",
+			"href",
+			"(^.+)\\n\\n",
+			"\\n",
+			"speak?",
+			"WordBre",
+			"leson",
+			"introducing",
+			"20",
+			"Language",
+			"image",
+			"post.image",
+			"page.image",
+			"post-features",
+			"og:type",
+			"meta.html",
+			"SEO",
+			"Begin",
+			"Begin Jekyll SEO",
+			"begin Jekyll SEO",
+			"large_",
+			"summary_",
+			"summary",
+			"summary_large_image",
+			"summary_large",
+			"summary",
+			"summar",
+			"large",
+			"twitter",
+			"image",
+			"seo",
+			"og:image",
+			"og-image",
+			"image",
+			": wordbrewery",
+			": @wordbrewery",
+			"\"@wordbrewery\"",
+			"@wordbrewery",
+			"rmccarl",
+			"image",
+			"seo",
+			"og:image",
+			"image",
+			"summary_large_image",
+			"Twitter"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"\\n",
+			"",
+			"\\1",
+			"",
+			"\\1,\\2",
+			",",
+			"",
+			"\\1\\n\\n\\n",
+			"speak?code={{ site.code }}&",
+			"@WordBrewery",
+			"Ryan McCarl",
+			"",
+			"{{site.wordbrewery}} ",
+			"{{site.wordbrewery}}",
+			"Loading . . . ",
+			"sentenceModalWordList",
+			"{{ site.wordbrewery }}",
+			"",
+			"success-"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wordbrewery-jekyll",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 88,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "blog_word_entry",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rss+email_markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "blog_sentence_entry",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "spanishfund",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 88,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "email",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 466,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70,
+								70
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "blogpost",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "emacs.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/@Artyom/Artyom.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 477.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

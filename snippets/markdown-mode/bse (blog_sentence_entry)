@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Blog post sentence entry
+# key: bse
+# --
+## $1. $2
+
+<audio controls><source src="https://wordbrewery.com/api/tts/speak?code={{ site.code }}&languageId=$3&text=$2"></source></audio>

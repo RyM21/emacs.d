@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: trumpyears
+# key: tp
+# --
+Title: `(insert-time-string "%b. %e, %Y")`: Day (my-calendar-count-days '(1 20 2017) '($1 $2 2017))
+Date: `(insert-time-string "%Y-%m-%d")` 12:00
+Modified: 2017-01-20 12:00
+Tags: $3
+Authors: Ryan McCarl
+

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: blog_post_link
+# key: bpl
+# --
+[$1]({{ site.baseurl }}{% post_url $2 %})

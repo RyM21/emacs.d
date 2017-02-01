@@ -1,0 +1,1 @@
+emacs --batch --eval (progn (find-file "~/notes/todo.org") (org-store-agenda-views))

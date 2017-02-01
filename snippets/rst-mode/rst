@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: rst
+# key: rst
+# --
+================================================
+WB Documentation
+================================================
+
+.. toctree::
+   :titlesonly:
+
+   Blog and Social Media <blog_sm>
+   Design
+   Development
+   Documentation
+
+
+.. _Documentation:
+
+Documentation
+------------------------------------------------
+
+.. toctree::
+   :titlesonly:
+
+   WordBrewery Documentation Style Guide <docs_style_guide/rst>
+   RestructuredText <rst_template>
+
+      RST Cheatsheet <http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt>
+      RST Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>
+      RST Reference <https://media.readthedocs.org/pdf/sphinx/stable/sphinx.pdf>
+      RST Template <rst_template>
+
