@@ -6,6 +6,7 @@
 
 (package-initialize)
 (require 'ansi-color)
+(require 'auto-org-md)
 (require 'bbdb)
 (require 'cc-mode)
 (require 'font-lock)
@@ -18,6 +19,7 @@
 (require 'lentic)
 (require 'markdown-mode)
 (require 'org)
+(require 'org-gcal)
 (require 'pandoc)
 (require 'smex)
 (require 'sphinx-mode)
@@ -27,6 +29,10 @@
 (color-theme-initialize)
 
 (add-to-list 'auto-mode-alist '("\\.dat$" . ledger-mode))
+
+;; Projectile Mode
+
+(projectile-global-mode)
 
 ;; Smart Mode Line
 
@@ -88,7 +94,7 @@
       '(("A" "Agenda" agenda "" nil ("agenda.html" "agenda.txt" "agenda.ics"))
         ("T" "Global to-do list" alltodo "" nil ("todo.html" "org-todo.txt"))
         ("L" "Law tasks" tags-todo "law" nil ("law.html" "law.txt" "law.ics"))
-        ("E" "Errands" tags-todo "errands" nil ("errands.html" "errands.txt" "errands.ics"))
+        ("E" "Errands" tags-todo "errand" nil ("errands.html" "errands.txt" "errands.ics"))
         ("W" "WordBrewery" tags-todo "WB" nil ("WBtasks.html" "WBtasks.txt" "WBcal.ics"))))
 
 (defvar my/org-habit-show-graphs-everywhere t
@@ -97,10 +103,11 @@
 buffers.  Set this variable to any non-nil variable to show
 consistency graphs in all Org mode agendas.")
 
+
 (setq org-gcal-client-id "536240286054-vvmfjq1kn8b1hhgoqgalkgnr44e6jdjn.apps.googleusercontent.com"
       org-gcal-client-secret "4xOImiVeBgaWMsh7vbeDcZww"
-      org-gcal-file-alist '(("ryan.mccarl@gmail.com" .  "~/notes/todo.org")
-                            ("0p193dqqm64rskq1mluijs71lvoj3rsf@import.calendar.google.com" .  "~/notes/todo.org")))
+      org-gcal-file-alist '(("ryan.mccarl@gmail.com" .  "~/notes/calendar.org")))
+                            ;("0p193dqqm64rskq1mluijs71lvoj3rsf@import.calendar.google.com" .  ;"~/notes/todo.org")))
 
 
 
@@ -129,18 +136,26 @@ consistency graphs in all Org mode agendas.")
   (org-carry-forward-uncompleted-tasks) ;; See http://emacs.stackexchange.com/questions/5699/org-mode-trigger-todo-status-on-a-certain-date/5700#5700
   (org-store-agenda-views))
 
+(eval-after-load "org"
+  '(send-agenda))
 
 (eval-after-load "org"
-'(send-agenda))
+  '(org-gcal-fetch))
+
+(eval-after-load "org"
+  '(org-gcal-sync))
 
 (load-theme 'RyanTheme)
 
 
 (make-variable-buffer-local 'hl-line-mode)
 (add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
+(add-hook 'org-mode-hook (org-carry-forward-uncompleted-tasks))
 
-;; Keep global-font-lock-mode from turning on font-lock-mode
-(setq-local font-lock-global-modes (not 'org-mode))
+
+
+								;; Keep global-font-lock-mode from turning on font-lock-mode
+								(setq-local font-lock-global-modes (not 'org-mode))
 (setq-local hl-line-mode (not 'org-mode))
 (setq org-edit-src-content-indentation 0)
 

@@ -22,10 +22,10 @@
       org-agenda-tags-todo-honor-ignore-options t
       org-agenda-todo-keyword-format ""
       org-agenda-view-columns-initially t
-      org-agenda-window-setup '(other-window))
-org-clone-delete-id t
-org-closed-keep-when-no-todo t
-org-deadline-warning-days 10)
+      org-agenda-window-setup '(other-window)
+      org-clone-delete-id t
+      org-closed-keep-when-no-todo t
+      org-deadline-warning-days 10)
 
 (setq org-export-backends '(ascii beamer html icalendar latex md odt))
 
@@ -178,15 +178,15 @@ safe-local-variable-values quote no-byte-compile t
 (setq org-todo-keywords
       (quote ((sequence "NEXT(n)" "TODO(t)" "|" "DONE(x)" "DELEGATED(d)" "WAITING(w)" "SOMEDAY(s)" "NOT DOING(o)"))))
 
-;; (setq org-todo-keyword-faces
-;;       (quote (("TODO" :foreground "red" :weight bold)
-;;               ("NEXT" :foreground "blue" :weight bold)
-;;               ("DONE" :foreground "forest green" :weight default)
-;;               ("WAITING" :foreground "orange" :weight default)
-;;               ("DELEGATED" :foreground "magenta" :weight default)
-;;               ("SOMEDAY" :foreground "gray" :weight default)
-;;               ("NOT DOING" :foreground "black" :weight default)
-;;               )))
+(setq org-todo-keyword-faces
+      (quote (("TODO" :foreground "red" :weight bold)
+              ("NEXT" :foreground "blue" :weight bold)
+              ("DONE" :foreground "forest green" :weight default)
+              ("WAITING" :foreground "orange" :weight default)
+              ("DELEGATED" :foreground "magenta" :weight default)
+              ("SOMEDAY" :foreground "gray" :weight default)
+              ("NOT DOING" :foreground "black" :weight default)
+              )))
 
 
 (setq org-tag-alist '((:startgroup . "Category")

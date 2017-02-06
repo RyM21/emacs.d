@@ -1,6 +1,0 @@
-.DS_Store
-/*.el
-/assets/*.lines
-/assets/snippets/
-/elpa
-*.elc

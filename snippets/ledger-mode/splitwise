@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: splitwise
+# key: ;s
+# --
+    ; :splitwise:
+    $0

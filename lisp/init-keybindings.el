@@ -2,7 +2,8 @@
 
 (global-unset-key (kbd "C-c r"))  ;; Allow C-c r as personal prefix key
 
-(global-set-key (kbd "C-<down>") 'next)
+
+(global-set-key (kbd "C-x C-c") 'org-agenda)
 (global-set-key (kbd "C-<up>") 'prior)
 (global-set-key (kbd "<f9> c") 'calendar)
 (global-set-key (kbd "<f9> f") 'boxquote-insert-file)
