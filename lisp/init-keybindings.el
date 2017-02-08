@@ -1,8 +1,12 @@
 ;; Keybindings
 
 (global-unset-key (kbd "C-c r"))  ;; Allow C-c r as personal prefix key
+(global-unset-key (kbd "C-c m"))  ;; Allow C-c m as personal prefix key
 
-
+(global-set-key (kbd "C-c ESC") 'save-buffers-kill-emacs)
+(global-set-key (kbd "C-c m p") 'mark-paragraph)
+(global-set-key (kbd "C-c m s") 'mark-end-of-sentence)
+(global-set-key (kbd "M-t") 'toggle-frame-fullscreen)
 (global-set-key (kbd "C-x C-c") 'org-agenda)
 (global-set-key (kbd "C-<up>") 'prior)
 (global-set-key (kbd "<f9> c") 'calendar)
@@ -14,6 +18,7 @@
 (global-set-key (kbd "C-c -") 'text-scale-decrease)
 (global-set-key (kbd "C-c C-f") 'backward-kill-word)
 (global-set-key (kbd "C-c C-k") 'kill-region)
+(global-set-key (kbd "C-c k") 'kill-region)
 (global-set-key (kbd "C-c C-o") 'other-window)
 (global-set-key (kbd "C-c C-w") 'kill-word)
 (global-set-key (kbd "C-c q") 'delete-indentation)
@@ -21,7 +26,6 @@
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-k" ) 'kill-line)
-(global-set-key (kbd "M-s") 'save-buffer)
 (global-set-key (kbd "M-s") 'save-buffer)
 (global-set-key (kbd "C-x C-m") 'save-macro)
 (global-set-key (kbd "C-c C-b") 'bookmark-set)
@@ -57,6 +61,13 @@
 (eval-after-load "rst-mode"
   '(add-hook 'rst-mode-hook 'markdown-mode))
 
+(eval-after-load "markdown-mode"
+  (add-hook 'markdown-mode-hook (writeroom-mode)))
+
+(eval-after-load "rst-mode"
+  (add-hook 'rst-mode-hook (writeroom-mode)))
+
+
 ;; HTML Mode
 
 (defun my-html-mode-config ()
@@ -69,6 +80,13 @@
 
 ;; add to hook
 (add-hook 'html-mode-hook 'my-html-mode-config)
+
+(eval-after-load "html-mode"
+  '(add-hook 'html-mode-hook 'emmet-mode))
+
+(eval-after-load "html-mode"
+  '(add-hook 'html-mode-hook 'web-beautify-html))
+
 
 ;; Markdown Mode
 

@@ -9,6 +9,7 @@
 (require 'auto-org-md)
 (require 'bbdb)
 (require 'cc-mode)
+(require 'emmet-mode)
 (require 'font-lock)
 (require 'init-functions)
 (require 'init-keybindings)
@@ -17,7 +18,6 @@
 (require 'js3-mode)
 (require 'ledger-mode)
 (require 'lentic)
-(require 'markdown-mode)
 (require 'org)
 (require 'org-gcal)
 (require 'pandoc)
@@ -25,10 +25,15 @@
 (require 'sphinx-mode)
 (require 'visual-regexp-steroids)
 (require 'yasnippet)
+(require 'wc-mode)
 
 (color-theme-initialize)
 
 (add-to-list 'auto-mode-alist '("\\.dat$" . ledger-mode))
+
+;; Word Count Mode
+
+(wc-mode 1)
 
 ;; Projectile Mode
 
@@ -104,10 +109,10 @@ buffers.  Set this variable to any non-nil variable to show
 consistency graphs in all Org mode agendas.")
 
 
-(setq org-gcal-client-id "536240286054-vvmfjq1kn8b1hhgoqgalkgnr44e6jdjn.apps.googleusercontent.com"
-      org-gcal-client-secret "4xOImiVeBgaWMsh7vbeDcZww"
-      org-gcal-file-alist '(("ryan.mccarl@gmail.com" .  "~/notes/calendar.org")))
-                            ;("0p193dqqm64rskq1mluijs71lvoj3rsf@import.calendar.google.com" .  ;"~/notes/todo.org")))
+(setq org-gcal-client-id "536240286054-vvmfjq1kn8b1hhgoqgalkgnr44e6jdjn.apps.googleusercontent.com")
+(setq org-gcal-client-secret "4xOImiVeBgaWMsh7vbeDcZww")
+(setq org-gcal-file-alist '(("ryan.mccarl@gmail.com" .  "~/notes/calendar.org")
+			    ("0p193dqqm64rskq1mluijs71lvoj3rsf@import.calendar.google.com" .  "~/notes/calendar2.org")))
 
 
 
@@ -149,13 +154,14 @@ consistency graphs in all Org mode agendas.")
 
 
 (make-variable-buffer-local 'hl-line-mode)
-(add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
+;(add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
+					;(add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
+(add-hook 'org-mode-hook (setq hl-line-mode nil))
 (add-hook 'org-mode-hook (org-carry-forward-uncompleted-tasks))
 
 
-
-								;; Keep global-font-lock-mode from turning on font-lock-mode
-								(setq-local font-lock-global-modes (not 'org-mode))
+;; Keep global-font-lock-mode from turning on font-lock-mode
+(setq-local font-lock-global-modes (not 'org-mode))
 (setq-local hl-line-mode (not 'org-mode))
 (setq org-edit-src-content-indentation 0)
 

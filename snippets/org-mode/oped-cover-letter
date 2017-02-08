@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: oped-cover-letter
+# key: oped
+# --
+Dear $1,
+
+Please find below a 660-word op-ed explaining why President Trump's travel ban is unconstitutional.
+
+I am an attorney and writer based in Denver and a former judicial clerk at the United States Court of Appeals for the Tenth Circuit. My articles have been appeared in publications including the Philadelphia Inquirer, Atlanta Journal-Constitution, Stanford Journal of International Law, and Hastings Constitutional Law Quarterly.
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+Ryan McCarl
+
+--
+Ryan McCarl
+1630 N. Clarkson St. #322
+Denver, CO 80218
+(231) 638-1201 | ryan.mccarl@wordbrewery.com
+http://ryanmccarl.com
+--
+
+$0
