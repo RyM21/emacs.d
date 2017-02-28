@@ -32,7 +32,6 @@
 (global-set-key (kbd "C-c r c") 'customize-face)
 (global-set-key (kbd "C-c r v") 'customize-variable)
 
-
 ;; Global
 
 (global-set-key (kbd "C-M-s") 'section-sign-plus-nonbreaking-space)
@@ -104,6 +103,8 @@
 
 (defun my-org-mode-config ()
   (org-indent-mode 1)
+  (local-set-key (kbd "C-c r b") 'insert-blog-post-from-header)
+  (local-set-key (kbd "C-c r p") 'insert-blog-post-from-header)
   (local-set-key (kbd "C-x C-h 3") 'org-insert-third-level-star-headline)
   (local-set-key (kbd "M-a") 'org-table-beginning-of-field)
   (local-set-key (kbd "C-c r t") 'org-table-create)
@@ -131,7 +132,7 @@
   (local-set-key (kbd "<f9> l") 'org-toggle-link-display)
   (local-set-key (kbd "C-c ,") 'org-demote-subtree)
   (local-set-key (kbd "C-c .") 'org-promote-subtree)
-  (setq org-modules '(org-gnus org-id org-habit org-irc org-protocol org-eww org-bbdb org-choose org-depend))
+  (setq org-modules '(org-gnus org-id org-habit org-irc org-protocol org-eww org-bbdb org-choose org-depend yasnippet markdown-mode))
 
   )
 

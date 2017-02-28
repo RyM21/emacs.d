@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: document.createElement
+# key: dc
+# --
+document.createElement("$1");
+$0

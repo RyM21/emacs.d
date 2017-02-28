@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: example
+# key: :e
+# --
+:EXAMPLE:
+#+BEGIN_SRC ${1:js} :tangle no
+$0
+#+END_SRC
+:END:

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: document.body.addEventListener
+# key: dba
+# --
+document.body.addEventListener(${1:event}, function() {
+    $0
+});

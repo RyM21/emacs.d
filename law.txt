@@ -1,0 +1,5 @@
+Headlines with TAGS match: law
+Press ‘C-u r’ to search again with new search string
+  law:        NEXT [#A] Revise resume and send to Set
+  law:        NEXT [#A] Write thank-you emails to Bryan Cave interviewers
+  law:        NEXT [#A] Review documents Grandpa sent me

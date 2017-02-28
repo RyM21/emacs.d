@@ -49,10 +49,11 @@
 (fset 'html-link-to-markdown
       (lambda (&optional arg) "Keyboard macro" (interactive "p") (kmacro-exec-ring-item (quote ([19 104 114 101 102 61 right 32 backspace 33554464 backspace 67108896 19 34 left 134217847 up right return up 109 100 tab backspace backspace backspace 45 32 91 73 backspace 32 93 40 25 41 down 19 62 right left S-right S-right S-right S-right S-right S-right S-right left left left left left left left 67108896 67108896 up down 67108896 19 60 left 134217847 up 1 19 41 18 40 backspace backspace 40 backspace backspace backspace 40 left left backspace 25 right right right right right right right right right right right right right right right right right right right right right right right right right right right right right left left left left left left left left left left left left left left left left 5 return] 0 "%d")) arg)))
 
-
-
 (fset 'ledger_amount
       (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("  $" 0 "%d")) arg)))
+
+(fset 'insert-blog-post-from-header
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 134217830 134217826 11 25 return return return up 3 22 4 109 97 114 107 100 111 119 110 return 32 58 116 97 110 103 108 101 32 126 47 119 98 98 108 111 103 47 95 100 114 97 102 116 115 47 25 18 116 97 110 103 108 101 right 5 right 11 25 down down return up up up 5 return return return up 24 105 25 67108911 backspace backspace backspace backspace backspace backspace backspace backspace backspace backspace backspace backspace backspace 25 return 3 14] 0 "%d")) arg)))
 
 
 

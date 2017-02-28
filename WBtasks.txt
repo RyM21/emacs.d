@@ -1,0 +1,129 @@
+Headlines with TAGS match: WB
+Press ‘C-u r’ to search again with new search string
+  todo:       NEXT [#A] Approve and distribute Kelsey's infographics
+  todo:       NEXT [#A] Complete forms to register as LLC in Michigan
+  todo:       NEXT [#A] Edit Kelsey's Highbrow course lessons
+  todo:       NEXT [#A] Give feedback to re: subscription tier page; ask him to update
+  todo:       NEXT [#A] Write script for Kickstarter video
+  todo:       NEXT [#A] Write text for subscription emails
+  todo:       NEXT [#A] Next Spanish Fundamentals posts
+  todo:       NEXT [#A] Review latest version of Course Mode and post issues on JIRA
+  todo:       NEXT [#B] Review and publish Kelsey's blog posts
+  todo:       TODO [#A] Create "milestones" for profile page timeline
+  todo:       TODO [#A] Create guidelines for email template
+  todo:       TODO [#A] Create short project video (under 5 min)
+  todo:       TODO [#A] Create spreadsheet for blogger outreach (identify 20 journalists)
+  todo:       TODO [#A] Create spreadsheet for journalist outreach (identify 20 journalists)
+  todo:       TODO [#A] Finalize WordBrewery spreadsheet for 2016
+  todo:       TODO [#A] Follow up on all contacts from Startup School
+  todo:       TODO [#A] Form LLC
+  todo:       TODO [#A] Identify Kickstarter rewards
+  todo:       TODO [#A] Set up Highbrow course
+  todo:       TODO [#A] Spanish Fundamentals posts
+  todo:       TODO [#B] 20 new Quora posts
+  todo:       TODO [#B] 20 new Reddit posts
+  todo:       TODO [#B] Add testimonials to front page.
+  todo:       TODO [#B] Ask Yuri to upload latest English, Spanish, and Japanese audio
+  todo:       TODO [#B] Brainstorm blog post ideas
+  todo:       TODO [#B] Bug-test list management
+  todo:       TODO [#B] Check Google Translate usage and expenses
+  todo:       TODO [#B] Check out: PressFriendly
+  todo:       TODO [#B] Check the English sentences for deletions
+  todo:       TODO [#B] Complete / update quality control and testing requirement docs
+  todo:       TODO [#B] Complete paperwork for preliminary patent app
+  todo:       TODO [#B] Conduct and post interview with Maarten van Gompel
+  todo:       TODO [#B] Contact Alexander Arguelles to ask about reusing his interview
+  todo:       TODO [#B] Create acknowledgments page
+  todo:       TODO [#B] Create customer outreach / email list
+  todo:       TODO [#B] Create personas
+  todo:       TODO [#B] Create spreadsheet researching 10 similar successful kickstart projects
+  todo:       TODO [#B] Decide how to define and teach idiomatic phrases.
+  todo:       TODO [#B] Define settings list feature requirements
+  todo:       TODO [#B] Design backer polls
+  todo:       TODO [#B] Draft Kickstarter business story
+  todo:       TODO [#B] Explore options for creating and distributing Spanish flash card decks before holidays
+  todo:       TODO [#B] Figure out how to ID who completed each translation and audio recording
+  todo:       TODO [#B] Find unresolved issues in Slack, move them to JIRA
+  todo:       TODO [#B] Finish marketing/SEO spreadsheet
+  todo:       TODO [#B] First 30 blog posts
+  todo:       TODO [#B] First 30 blog posts
+  todo:       TODO [#B] Follow up with 1776 person re Crowdfunding
+  todo:       TODO [#B] Follow up with 1776 re: October payment
+  todo:       TODO [#B] Get feedback on Kickstarter rewards
+  todo:       TODO [#B] Get Feedburner average daily reach to > 100
+  todo:       TODO [#B] Get Mara set up with French
+  todo:       TODO [#B] Get UX feedback from 5 additional experts
+  todo:       TODO [#B] Guest post on David Comp's blog
+  todo:       TODO [#B] Hire someone to help make Kickstarter video
+  todo:       TODO [#B] Identify 30 reporters to email
+  todo:       TODO [#B] Identify 50 prospective influencers / customers to cold-email before and after launch
+  todo:       TODO [#B] Identify Kickstarter stretch goals, if any
+  todo:       TODO [#B] Improve translation / QC workflow
+  todo:       TODO [#B] Indicate Uber rides and travel expenses in Mint
+  todo:       TODO [#B] Japanese katakana posts
+  todo:       TODO [#B] Look into BuildUp Denver events
+  todo:       TODO [#B] Look into how to use losses / investment to pay tax forward and backward
+  todo:       TODO [#B] Look into: system to give different weight to different backers (e.g. voting system)
+  todo:       TODO [#B] New subscription page mockup
+  todo:       TODO [#B] Next Reading Katakana posts
+  todo:       TODO [#B] Outreach to U of C Study Abroad Listhost
+  todo:       TODO [#B] Patent protection
+  todo:       TODO [#B] Post interview with Alexander Arguelles
+  todo:       TODO [#B] Prepare backend for WordBrewery-curated public lists
+  todo:       TODO [#B] Proficiency test modal
+  todo:       TODO [#B] Reach out to at least 5 people who have run kickstarter projects
+  todo:       TODO [#B] Read and take notes on "Disciplined Entrepreneurship"
+  todo:       TODO [#B] Register copyright
+  todo:       TODO [#B] Register trademark
+  todo:       TODO [#B] Register WB copyrights
+  todo:       TODO [#B] Register WB trademarks
+  todo:       TODO [#B] Respond to 20 HARO queries
+  todo:       TODO [#B] Review Kelsey's infographics and post them as blog posts
+  todo:       TODO [#B] Review testimonials mockups
+  todo:       TODO [#B] Screencast demonstrating export to Anki
+  todo:       TODO [#B] Screencast demonstrating export to Memrise
+  todo:       TODO [#B] Screencast demonstrating use of WB to study for SAT
+  todo:       TODO [#B] Screencast explaining WordBrewery in one minute
+  todo:       TODO [#B] Send testimonials to Daria
+  todo:       TODO [#B] Set up multi-person Kickstarter fundraising team
+  todo:       TODO [#B] Update WordBrewery expenses spreadsheet
+  todo:       TODO [#B] Verify that About page has been fixed
+  todo:       TODO [#B] Verify that blog footer icons have been fixed
+  todo:       TODO [#B] Work with Kostyantyn & Yuri to define algorithm for proficiency test modal
+  todo:       TODO [#B] Write and send Daria specs for public and shared lists feature
+  todo:       TODO [#B] Write social media workflow for documentation
+  todo:       TODO [#B] Feedback on  testimonials mockups
+  todo:       TODO [#B] Feedback on proficiency test sketches
+  todo:       TODO [#C] 5 posts on how-to-learn-any-language
+  todo:       TODO [#C] Add research page to front page
+  todo:       TODO [#C] Attempt again to transfer Wide Awake Minds domain from GoDaddy to Dreamhost
+  todo:       TODO [#C] Attend 5 DC / Denver tech, language-learning, or education events
+  todo:       TODO [#C] Build first shared lists:
+  todo:       TODO [#C] Check sentence statistics for all languages
+  todo:       TODO [#C] Complete Business Model Canvas
+  todo:       TODO [#C] Contact former language teachers
+  todo:       TODO [#C] Contact IHS
+  todo:       TODO [#C] Create category pages
+  todo:       TODO [#C] Create Mailchimp lists of registered WordBrewery customers
+  todo:       TODO [#C] Create template for audio programs
+  todo:       TODO [#C] Expand Facebook subscribers to 4500
+  todo:       TODO [#C] Follow up on the angel investors Carlee found
+  todo:       TODO [#C] Follow up with Christina on Twitter about mutual guest posts
+  todo:       TODO [#C] Further define hops specs and check documentation
+  todo:       TODO [#C] Get back to Kelsey re: social media strategy notes
+  todo:       TODO [#C] Kana script course
+  todo:       TODO [#C] Look into Groovebook (photo printing service) for custom flashcards.
+  todo:       TODO [#C] Prepare backend for user-created shared lists
+  todo:       TODO [#C] Promote Spanish Core Anki deck
+  todo:       TODO [#C] Read and take notes on "UX Strategy"
+  todo:       TODO [#C] Read Moz and Google SEO packets
+  todo:       TODO [#C] Respond to 1776 people re: crowdfunding
+  todo:       TODO [#C] Respond to 1776 person re: scraping websites
+  todo:       TODO [#C] Revise TOU
+  todo:       TODO [#C] Screencast demonstrating export to Quizlet
+  todo:       TODO [#C] Screencast: the making of WordBrewery's Anki decks
+  todo:       TODO [#C] Spanish Fundamentals
+  todo:       TODO [#C] Style guide for translations and social media posts
+  todo:       TODO [#C] Test export mode and get customer feedback
+  todo:       TODO [#C] Test SEO readiness of site
+  todo:       TODO [#C] Update WordBrewery expenses spreadsheet

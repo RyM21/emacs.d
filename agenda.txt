@@ -1,0 +1,75 @@
+Wednesday  11 January 2017
+  errand:     Deadline:   NEXT [#A] Order phone case + Amazon stuff for Carlee
+  errand:      1 d. ago:  NEXT [#A] Call Grandpa Moblo re: IRS / probate
+  todo:        8 d. ago:  NEXT [#A] Edit Kelsey's Highbrow course lessons
+  errand:      9 d. ago:  NEXT [#A] Submit latest insurance claims
+  law:         9 d. ago:  NEXT [#A] Review documents Grandpa sent me
+  errand:      9 d. ago:  NEXT [#A] Confirm that I paid Colorado tax penalty
+  todo:       NEXT [#A] Next Spanish Fundamentals posts
+  todo:       NEXT [#A] Review latest version of Course Mode and post issues on JIRA
+  law:        NEXT [#A] Review documents Grandpa sent me
+  errand:     In   6 d.:  TODO [#B] Update finances spreadsheet
+  todo:       Deadline:   TODO [#B] Look into how to use losses / investment to pay tax forward and backward
+  todo:        5 d. ago:  TODO [#A] Finalize WordBrewery spreadsheet for 2016
+  todo:        8 d. ago:  TODO [#A] Form LLC
+  habits:     TODO [#A] Take one concrete step toward getting funding (apply for grants, contact angel investor, etc.) (20m 4x/wk)
+  habits:     TODO [#A] Up by nine a.m.
+  todo:       TODO [#B] Feedback on  testimonials mockups
+  todo:       TODO [#B] Feedback on proficiency test sketches
+  habits:     TODO [#B] Contact one reporter or respond to one HARO query (15m 3x/wk)
+  habits:     TODO [#B] Testing and quality checking with JIRA posts (15m 3x/week)
+  errand:     TODO [#B] Find couples therapist
+  habits:     TODO [#B] Review and respond to Slack posts; request Scrum updates (15m 4x/wk)
+  habits:     TODO [#B] Work on documentation (20m 2x/week)
+  habits:     TODO [#B] Influencer outreach (20m 2x/week)
+  habits:     TODO [#B] Check audio/translation spreadsheets; complete ~20 translations (30m 2x/wk)
+  habits:     TODO [#B] Draft, edit, or post a blog post (30m 3x/week)
+  habits:     TODO [#B] Review Upwork work diaries; adjust hours and expenses; update expenses spreadsheet (30m 1x/wk)
+  habits:     TODO [#B] Update metrics spreadsheet (20m 1x/wk)
+  habits:     TODO [#B] Bed by twelve-thirty a.m.
+  social:     TODO [#B] Call Grandpa Moblo
+  habits:     TODO [#B] Update JIRA, respond to comments, add new tasks, clear old tasks (20m 3x/wk)
+  habits:     TODO [#B] Organize design folder; review mockups; add design needs to JIRA (20m 2x/wk)
+  habits:     TODO [#B] Exercise in the morning
+  errand:     Scheduled:  TODO [#B] Buy OJ
+  habits:     TODO [#C] Check social media outlets, Hootsuite queue, etc.; post; manage followers; engage w/ followers (15m 3x/wk)
+  habits:     TODO [#C] Add users to email lists; send email update (30m 1x/week)
+  habits:     TODO [#C] Work on Anki decks (30m 1x/week)
+Thursday   12 January 2017
+  habits:     Scheduled:  TODO [#A] Up by nine a.m.
+  habits:     Scheduled:  TODO [#B] Bed by twelve-thirty a.m.
+  habits:     Scheduled:  TODO [#B] Update JIRA, respond to comments, add new tasks, clear old tasks (20m 3x/wk)
+  habits:     Scheduled:  TODO [#B] Exercise in the morning
+Friday     13 January 2017
+  habits:     Scheduled:  TODO [#A] Up by nine a.m.
+  habits:     Scheduled:  TODO [#B] Bed by twelve-thirty a.m.
+  habits:     Scheduled:  TODO [#B] Exercise in the morning
+  habits:     Scheduled:  TODO [#C] Work on Anki decks (30m 1x/week)
+Saturday   14 January 2017
+  habits:     Scheduled:  TODO [#A] Up by nine a.m.
+  errand:     TODO [#A] Weekly planning
+  habits:     Scheduled:  TODO [#B] Review Upwork work diaries; adjust hours and expenses; update expenses spreadsheet (30m 1x/wk)
+  habits:     Scheduled:  TODO [#B] Bed by twelve-thirty a.m.
+  habits:     Scheduled:  TODO [#B] Update JIRA, respond to comments, add new tasks, clear old tasks (20m 3x/wk)
+  habits:     Scheduled:  TODO [#B] Organize design folder; review mockups; add design needs to JIRA (20m 2x/wk)
+  habits:     Scheduled:  TODO [#B] Exercise in the morning
+Sunday     15 January 2017
+  habits:     Scheduled:  TODO [#A] Up by nine a.m.
+  habits:     Scheduled:  TODO [#B] Bed by twelve-thirty a.m.
+  habits:     Scheduled:  TODO [#B] Exercise in the morning
+  errand:     Scheduled:  TODO [#B] Buy milk
+Monday     16 January 2017 W03
+  habits:     Scheduled:  TODO [#A] Up by nine a.m.
+  habits:     Scheduled:  TODO [#B] Update metrics spreadsheet (20m 1x/wk)
+  habits:     Scheduled:  TODO [#B] Bed by twelve-thirty a.m.
+  habits:     Scheduled:  TODO [#B] Update JIRA, respond to comments, add new tasks, clear old tasks (20m 3x/wk)
+  habits:     Scheduled:  TODO [#B] Exercise in the morning
+  errand:     Scheduled:  TODO [#B] Schedule haircut
+Tuesday    17 January 2017
+  errand:     Deadline:   TODO [#B] Update finances spreadsheet
+  habits:     Scheduled:  TODO [#A] Up by nine a.m.
+  habits:     Scheduled:  TODO [#B] Bed by twelve-thirty a.m.
+  habits:     Scheduled:  TODO [#B] Exercise in the morning
+| File | Headline       | Time |
+|------+----------------+------|
+|      | ALL *Total time* | *0:00* |

@@ -5,27 +5,59 @@
 (add-to-list 'load-path (expand-file-name "amazon-this" user-emacs-directory))
 
 (package-initialize)
+
+(require 'amazon-this)
 (require 'ansi-color)
 (require 'auto-org-md)
 (require 'bbdb)
 (require 'cc-mode)
+(require 'elfeed)
 (require 'emmet-mode)
 (require 'font-lock)
+(require 'gnus)
+(require 'google-this)
 (require 'init-functions)
 (require 'init-keybindings)
 (require 'init-macros)
-(require 'jedi)
-(require 'js3-mode)
-(require 'ledger-mode)
-(require 'lentic)
+(require 'ng2-mode)
+(require 'nodejs-repl)
+(require 'ob-js)
+(require 'ob-typescript)
 (require 'org)
 (require 'org-gcal)
 (require 'pandoc)
 (require 'smex)
 (require 'sphinx-mode)
 (require 'visual-regexp-steroids)
-(require 'yasnippet)
 (require 'wc-mode)
+(require 'wikipedia-this)
+(require 'yasnippet)
+
+;; (add-to-list 'load-path "~/lintnode")
+;; (require 'flymake-jslint)
+;; ;; Make sure we can find the lintnode executable
+;; (setq lintnode-location "~/path/to/lintnode")
+;; ;; JSLint can be... opinionated
+;; (setq lintnode-jslint-excludes (list 'nomen 'undef 'plusplus 'onevar 'white))
+;; ;; Start the server when we first open a js file and start checking
+;; (add-hook 'js-mode-hook
+;;           (lambda ()
+;;             (lintnode-hook)))
+
+(defun insert-current-date () (interactive)
+       (insert (shell-command-to-string "echo -n $(date +%Y-%m-%d)")))
+
+(add-hook 'html-mode-hook
+          (lambda ()
+            (emmet-mode)))
+
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (tide-mode)))
+
+(add-hook 'typescript-mode-hook
+          (lambda ()
+	    (ng2-ts-mode)))
 
 (color-theme-initialize)
 
@@ -34,15 +66,6 @@
 ;; Word Count Mode
 
 (wc-mode 1)
-
-;; Projectile Mode
-
-(projectile-global-mode)
-
-;; Smart Mode Line
-
-(sml/setup)
-
 
 (load-theme 'RyanTheme t nil)
 
@@ -68,6 +91,8 @@
 
 (setq auto-fill-mode nil)
 (setq visual-line-mode t)
+(setq global-visual-line-mode t)
+(setq global-writeroom-mode t)
 
 (defun org-carry-forward-uncompleted-tasks ()
   "Carry forward uncompleted tasks."
@@ -115,19 +140,43 @@ consistency graphs in all Org mode agendas.")
 			    ("0p193dqqm64rskq1mluijs71lvoj3rsf@import.calendar.google.com" .  "~/notes/calendar2.org")))
 
 
+(eval-after-load 'org-src
+  '(define-key org-src-mode-map
+     (kbd "C-x C-s") #'org-edit-src-exit))
+(setq org-confirm-babel-evaluate nil)
 
 (c-after-font-lock-init)
 (setq org-export-with-smart-quotes t)
+
 (setq org-export-babel-evaluate nil)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '(
-   (latex . t)
-   (python . t)
-   (ledger . t)
-   (sqlite . t)
-   (org . t)
-   ))
+(after-load 'org
+  (setq org-babel-load-languages
+        '((clojure . nil)
+          (css . t)
+          (dot . t)
+          (emacs-lisp . t)
+          (gnuplot . t)
+          (haskell . nil)
+          (js . t)
+          (latex . t)
+          (ledger . t)
+          (mongo . t)
+          (ocaml . nil)
+          (octave . nil)
+          (org . t)
+          (perl . nil)
+          (plantum1 . nil)
+          (python . t)
+          (R . nil)
+          (ruby . nil)
+          (scala . nil)
+          (screen . nil)
+          (shell . t)
+          (sql . nil)
+          (sqlite . t)
+          (typescript . t)
+          )))
+
 (setq org-src-preserve-indentation t)
 
 (defun send-agenda ()
@@ -136,7 +185,6 @@ consistency graphs in all Org mode agendas.")
   (setq inhibit-iso-escape-detection t)
   (setq org-export-with-broken-links t)
   (setq org-export-with-smart-quotes t)
-  (org-icalendar-export-agenda-files)
   (find-file "~/notes/todo.org")
   (org-carry-forward-uncompleted-tasks) ;; See http://emacs.stackexchange.com/questions/5699/org-mode-trigger-todo-status-on-a-certain-date/5700#5700
   (org-store-agenda-views))
@@ -154,11 +202,6 @@ consistency graphs in all Org mode agendas.")
 
 
 (make-variable-buffer-local 'hl-line-mode)
-;(add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
-					;(add-hook 'org-mode-hook (lambda () (setq hl-line-mode nil)))
-(add-hook 'org-mode-hook (setq hl-line-mode nil))
-(add-hook 'org-mode-hook (org-carry-forward-uncompleted-tasks))
-
 
 ;; Keep global-font-lock-mode from turning on font-lock-mode
 (setq-local font-lock-global-modes (not 'org-mode))
@@ -181,8 +224,39 @@ consistency graphs in all Org mode agendas.")
 ;;
 ;; See https://goo.gl/xkZAfA
 
+(setq sml/no-confirm-load-theme t)
 
 
+					; https://www.emacswiki.org/emacs/InsertFileName
+(defun my-insert-file-name (filename &optional args)
+  "Insert name of file FILENAME into buffer after point.
+    
+  Prefixed with \\[universal-argument], expand the file name to
+  its fully canocalized path.  See `expand-file-name'.
+  
+  Prefixed with \\[negative-argument], use relative path to file
+  name from current directory, `default-directory'.  See
+  `file-relative-name'.
+  
+  The default with no prefix is to insert the file name exactly as
+  it appears in the minibuffer prompt."
+  ;; Based on insert-file in Emacs -- ashawley 20080926
+  (interactive "*fInsert file name: \nP")
+  (cond ((eq '- args)
+	 (insert (file-relative-name filename)))
+	((not (null args))
+	 (insert (expand-file-name filename)))
+	(t
+	 (insert filename))))
 
+(global-set-key "\C-c\C-i" 'my-insert-file-name)
+
+(setq org-link-abbrev-alist
+      '(("bugzilla"  . "http://10.1.2.9/bugzilla/show_bug.cgi?id=")
+        ("url-to-ja" . "http://translate.google.fr/translate?sl=en&tl=ja&u=%h")
+        ("google"    . "http://www.google.com/search?q=")
+        ("gmap"      . "http://maps.google.com/maps?q=%s")
+        ("omap"      . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")
+        ("ads"       . "http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?author=%s&db_key=AST")))
 
 (provide 'init-local)

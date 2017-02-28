@@ -1,0 +1,242 @@
+Global list of TODO items of type: ALL
+Available with ‘N r’: (0)[ALL] (1)NEXT (2)TODO (3)DONE (4)DELEGATED (5)WAITING (6)SOMEDAY (7)NOT DOING
+  errand:     NEXT [#A] Submit latest insurance claims
+  errand:     NEXT [#A] Get final parking reimbursement from WH
+  errand:     NEXT [#A] Submit income form to FedLoans
+  errand:     NEXT [#A] Order phone case + Amazon stuff for Carlee
+  todo:       NEXT [#A] Write text for subscription emails
+  todo:       NEXT [#A] Write script for Kickstarter video
+  todo:       NEXT [#A] Complete forms to register as LLC in Michigan
+  todo:       NEXT [#A] Approve and distribute Kelsey's infographics
+  todo:       NEXT [#A] Edit Kelsey's Highbrow course lessons
+  todo:       NEXT [#A] Give feedback to re: subscription tier page; ask him to update
+  law:        NEXT [#A] Write thank-you emails to Bryan Cave interviewers
+  law:        NEXT [#A] Revise resume and send to Set
+  errand:     NEXT [#A] Confirm that I paid Colorado tax penalty
+  errand:     NEXT [#A] Call Grandpa Moblo re: IRS / probate
+  todo:       NEXT [#A] Next Spanish Fundamentals posts
+  todo:       NEXT [#A] Review latest version of Course Mode and post issues on JIRA
+  law:        NEXT [#A] Review documents Grandpa sent me
+  errand:     NEXT [#B] Catch up splitwise
+  errand:     NEXT [#B] Obtain IRS transcript
+  todo:       NEXT [#B] Review and publish Kelsey's blog posts
+  errand:     TODO [#A] Weekly planning
+  todo:       TODO [#A] Create guidelines for email template
+  todo:       TODO [#A] Identify Kickstarter rewards
+  todo:       TODO [#A] Create spreadsheet for journalist outreach (identify 20 journalists)
+  todo:       TODO [#A] Create spreadsheet for blogger outreach (identify 20 journalists)
+  todo:       TODO [#A] Create short project video (under 5 min)
+  todo:       TODO [#A] Form LLC
+  todo:       TODO [#A] Finalize WordBrewery spreadsheet for 2016
+  todo:       TODO [#A] Spanish Fundamentals posts
+  todo:       TODO [#A] Set up Highbrow course
+  todo:       TODO [#A] Follow up on all contacts from Startup School
+  todo:       TODO [#A] Create "milestones" for profile page timeline
+  habits:     TODO [#A] Play banjo or guitar
+  habits:     TODO [#A] Take one concrete step toward getting funding (apply for grants, contact angel investor, etc.) (20m 4x/wk)
+  habits:     TODO [#A] Up by nine a.m.
+  errand:     TODO [#B] Pay Banana Republic card
+  errand:     TODO [#B] Update finances spreadsheet
+  errand:     TODO [#B] Unpack boxes from WH
+  errand:     TODO [#B] Create packing checklist
+  errand:     TODO [#B] Figure out how to create mailing labels
+  errand:     TODO [#B] Take Cimzia
+  errand:     TODO [#B] Buy beer
+  errand:     TODO [#B] Order disposable litter boxes
+  errand:     TODO [#B] Order kitty litter
+  errand:     TODO [#B] Renew or cancel Dreamhost domain registrations
+  todo:       TODO [#B] Draft Kickstarter business story
+  todo:       TODO [#B] Set up multi-person Kickstarter fundraising team
+  todo:       TODO [#B] Identify 30 reporters to email
+  todo:       TODO [#B] Get feedback on Kickstarter rewards
+  todo:       TODO [#B] Hire someone to help make Kickstarter video
+  todo:       TODO [#B] Identify Kickstarter stretch goals, if any
+  todo:       TODO [#B] Create spreadsheet researching 10 similar successful kickstart projects
+  todo:       TODO [#B] Reach out to at least 5 people who have run kickstarter projects
+  todo:       TODO [#B] Identify 50 prospective influencers / customers to cold-email before and after launch
+  todo:       TODO [#B] Look into: system to give different weight to different backers (e.g. voting system)
+  todo:       TODO [#B] Design backer polls
+  todo:       TODO [#B] Review Kelsey's infographics and post them as blog posts
+  todo:       TODO [#B] Verify that blog footer icons have been fixed
+  todo:       TODO [#B] Next Reading Katakana posts
+  todo:       TODO [#B] Patent protection
+  todo:       TODO [#B] Complete paperwork for preliminary patent app
+  todo:       TODO [#B] Register trademark
+  todo:       TODO [#B] Register copyright
+  todo:       TODO [#B] Register WB trademarks
+  todo:       TODO [#B] Register WB copyrights
+  todo:       TODO [#B] Look into how to use losses / investment to pay tax forward and backward
+  todo:       TODO [#B] Indicate Uber rides and travel expenses in Mint
+  todo:       TODO [#B] Update WordBrewery expenses spreadsheet
+  todo:       TODO [#B] Check Google Translate usage and expenses
+  todo:       TODO [#B] Follow up with 1776 re: October payment
+  todo:       TODO [#B] Japanese katakana posts
+  todo:       TODO [#B] Brainstorm blog post ideas
+  todo:       TODO [#B] Contact Alexander Arguelles to ask about reusing his interview
+  todo:       TODO [#B] First 30 blog posts
+  todo:       TODO [#B] Post interview with Alexander Arguelles
+  todo:       TODO [#B] Conduct and post interview with Maarten van Gompel
+  todo:       TODO [#B] Get Feedburner average daily reach to > 100
+  todo:       TODO [#B] First 30 blog posts
+  todo:       TODO [#B] Write social media workflow for documentation
+  todo:       TODO [#B] Screencast explaining WordBrewery in one minute
+  todo:       TODO [#B] Screencast demonstrating use of WB to study for SAT
+  todo:       TODO [#B] Screencast demonstrating export to Memrise
+  todo:       TODO [#B] Screencast demonstrating export to Anki
+  todo:       TODO [#B] Finish marketing/SEO spreadsheet
+  todo:       TODO [#B] Create personas
+  todo:       TODO [#B] Create customer outreach / email list
+  todo:       TODO [#B] 20 new Quora posts
+  todo:       TODO [#B] 20 new Reddit posts
+  todo:       TODO [#B] Check out: PressFriendly
+  todo:       TODO [#B] Respond to 20 HARO queries
+  todo:       TODO [#B] Look into BuildUp Denver events
+  todo:       TODO [#B] Guest post on David Comp's blog
+  todo:       TODO [#B] Outreach to U of C Study Abroad Listhost
+  todo:       TODO [#B] Follow up with 1776 person re Crowdfunding
+  todo:       TODO [#B] New subscription page mockup
+  todo:       TODO [#B] Read and take notes on "Disciplined Entrepreneurship"
+  todo:       TODO [#B] Decide how to define and teach idiomatic phrases.
+  todo:       TODO [#B] Explore options for creating and distributing Spanish flash card decks before holidays
+  todo:       TODO [#B] Create acknowledgments page
+  todo:       TODO [#B] Get Mara set up with French
+  todo:       TODO [#B] Improve translation / QC workflow
+  todo:       TODO [#B] Figure out how to ID who completed each translation and audio recording
+  todo:       TODO [#B] Ask Yuri to upload latest English, Spanish, and Japanese audio
+  todo:       TODO [#B] Check the English sentences for deletions
+  todo:       TODO [#B] Proficiency test modal
+  todo:       TODO [#B] Work with Kostyantyn & Yuri to define algorithm for proficiency test modal
+  todo:       TODO [#B] Complete / update quality control and testing requirement docs
+  todo:       TODO [#B] Get UX feedback from 5 additional experts
+  todo:       TODO [#B] Write and send Daria specs for public and shared lists feature
+  todo:       TODO [#B] Prepare backend for WordBrewery-curated public lists
+  todo:       TODO [#B] Bug-test list management
+  todo:       TODO [#B] Add testimonials to front page.
+  todo:       TODO [#B] Review testimonials mockups
+  todo:       TODO [#B] Send testimonials to Daria
+  todo:       TODO [#B] Find unresolved issues in Slack, move them to JIRA
+  todo:       TODO [#B] Define settings list feature requirements
+  todo:       TODO [#B] Verify that About page has been fixed
+  tech:       TODO [#B] Review and practice delete options
+  tech:       TODO [#B] Set up capture templates in org-mode
+  tech:       TODO [#B] Learn to create and use links in org-mode
+  tech:       TODO [#B] Learn to set up and use Python in emacs
+  tech:       TODO [#B] Link Google Calendar with agenda
+  tech:       TODO [#B] Learn to manage email in org-mode
+  tech:       TODO [#B] Read "Natural Language Processing with Python"
+  tech:       TODO [#B] Work through Python SQL tutorial(s)
+  tech:       TODO [#B] Work through Python NLTK tutorial(s)
+  tech:       TODO [#B] Learn "wget"
+  tech:       TODO [#B] Complete reading & notes on HTML packets
+  todo:       TODO [#B] Library books checked out
+  todo:       TODO [#B] Update list of checked-out library books
+  todo:       TODO [#B] Ratey, The Disorganized Mind
+  todo:       TODO [#B] Kundera, The Unbearable Lightness of Being
+  todo:       TODO [#B] Thaler, Misbehaving
+  todo:       TODO [#B] New Penguin Italian Short Stories (Dual-Language)
+  todo:       TODO [#B] Sweigart, Automate the Boring Stuff with Python
+  todo:       TODO [#B] Skiena, The Algorithm Design Manual
+  social:     TODO [#B] Respond to Harlyn's email
+  social:     TODO [#B] Call Eric Cioe
+  social:     TODO [#B] Call Lisa
+  todo:       TODO [#B] Feedback on  testimonials mockups
+  todo:       TODO [#B] Feedback on proficiency test sketches
+  habits:     TODO [#B] Contact one reporter or respond to one HARO query (15m 3x/wk)
+  habits:     TODO [#B] Testing and quality checking with JIRA posts (15m 3x/week)
+  errand:     TODO [#B] Find couples therapist
+  habits:     TODO [#B] Review and respond to Slack posts; request Scrum updates (15m 4x/wk)
+  habits:     TODO [#B] Work on documentation (20m 2x/week)
+  habits:     TODO [#B] Influencer outreach (20m 2x/week)
+  habits:     TODO [#B] Check audio/translation spreadsheets; complete ~20 translations (30m 2x/wk)
+  habits:     TODO [#B] Draft, edit, or post a blog post (30m 3x/week)
+  habits:     TODO [#B] Review Upwork work diaries; adjust hours and expenses; update expenses spreadsheet (30m 1x/wk)
+  habits:     TODO [#B] Update metrics spreadsheet (20m 1x/wk)
+  habits:     TODO [#B] Bed by twelve-thirty a.m.
+  social:     TODO [#B] Call Grandpa Moblo
+  habits:     TODO [#B] Update JIRA, respond to comments, add new tasks, clear old tasks (20m 3x/wk)
+  habits:     TODO [#B] Organize design folder; review mockups; add design needs to JIRA (20m 2x/wk)
+  habits:     TODO [#B] Exercise in the morning
+  errand:     TODO [#B] Buy OJ
+  errand:     TODO [#B] Buy milk
+  errand:     TODO [#B] Schedule haircut
+  errand:     TODO [#B] Buy oreos
+  errand:     TODO [#B] Order new contacts
+  errand:     TODO [#C] Update 2016 medical expenses spreadsheet
+  errand:     TODO [#C] Call Best Buy to restore access to account
+  errand:     TODO [#C] Create address labels
+  errand:     TODO [#C] Look into exercises
+  errand:     TODO [#C] Look into office/standing desk exercises
+  errand:     TODO [#C] Look into exercises
+  errand:     TODO [#C] Look into carpal tunnel exercises
+  errand:     TODO [#C] Look into office/standing desk exercies
+  todo:       TODO [#C] Create Mailchimp lists of registered WordBrewery customers
+  todo:       TODO [#C] Respond to 1776 people re: crowdfunding
+  todo:       TODO [#C] Respond to 1776 person re: scraping websites
+  todo:       TODO [#C] Revise TOU
+  todo:       TODO [#C] Follow up on the angel investors Carlee found
+  todo:       TODO [#C] Update WordBrewery expenses spreadsheet
+  todo:       TODO [#C] Follow up with Christina on Twitter about mutual guest posts
+  todo:       TODO [#C] Create category pages
+  todo:       TODO [#C] Screencast: the making of WordBrewery's Anki decks
+  todo:       TODO [#C] Screencast demonstrating export to Quizlet
+  todo:       TODO [#C] Complete Business Model Canvas
+  todo:       TODO [#C] Read Moz and Google SEO packets
+  todo:       TODO [#C] Test SEO readiness of site
+  todo:       TODO [#C] 5 posts on how-to-learn-any-language
+  todo:       TODO [#C] Expand Facebook subscribers to 4500
+  todo:       TODO [#C] Promote Spanish Core Anki deck
+  todo:       TODO [#C] Get back to Kelsey re: social media strategy notes
+  todo:       TODO [#C] Style guide for translations and social media posts
+  todo:       TODO [#C] Contact former language teachers
+  todo:       TODO [#C] Contact IHS
+  todo:       TODO [#C] Attend 5 DC / Denver tech, language-learning, or education events
+  todo:       TODO [#C] Read and take notes on "UX Strategy"
+  todo:       TODO [#C] Spanish Fundamentals
+  todo:       TODO [#C] Kana script course
+  todo:       TODO [#C] Create template for audio programs
+  todo:       TODO [#C] Look into Groovebook (photo printing service) for custom flashcards.
+  todo:       TODO [#C] Attempt again to transfer Wide Awake Minds domain from GoDaddy to Dreamhost
+  todo:       TODO [#C] Test export mode and get customer feedback
+  todo:       TODO [#C] Build first shared lists:
+  todo:       TODO [#C] Prepare backend for user-created shared lists
+  todo:       TODO [#C] Check sentence statistics for all languages
+  todo:       TODO [#C] Add research page to front page
+  todo:       TODO [#C] Further define hops specs and check documentation
+  tech:       TODO [#C] Read "The Linux Command Line"             :reading:tech:
+  tech:       TODO [#C] Figure out org-mode tag alignment problems
+  tech:       TODO [#C] FIgure out Tramp
+  tech:       TODO [#C] Figure out how to export from org to local server
+  tech:       TODO [#C] Figure out how to print from Emacs (esp. automatically)
+  tech:       TODO [#C] Try ox-jira mode
+  tech:       TODO [#C] Try ox-rst mode (export org-mode to
+  tech:       TODO [#C] Set up blogging through single org-mode file
+  tech:       TODO [#C] Look for Emacs / WordPress integratons
+  tech:       TODO [#C] Download new version of "Mastering Emacs"
+  tech:       TODO [#C] Set up different load-paths depending on system
+  tech:       TODO [#C] Learn to run shell commands from within emacs
+  tech:       TODO [#C] Skim "Learning Emacs"
+  tech:       TODO [#C] Read "An Introduction to Programming in Emacs Lisp"
+  tech:       TODO [#C] Gradually migrate notes into linked text files in org-mode
+  tech:       TODO [#C] Get used to org-capture
+  tech:       TODO [#C] Learn about custom agenda views
+  tech:       TODO [#C] Fix gnus on Mac
+  tech:       TODO [#C] Finish WB Blogging tool
+  tech:       TODO [#C] Finish "Try Python" on CodeSchool
+  tech:       TODO [#C] Finish "Try SQL" on CodeSchool
+  tech:       TODO [#C] Fix PYTHONPATH problem on Macbook
+  tech:       TODO [#C] Learn and practice UNIX commands
+  tech:       TODO [#C] Learn "grep"
+  tech:       TODO [#C] Learn "find"
+  tech:       TODO [#C] Learn "awk"
+  tech:       TODO [#C] Learn "rsync"
+  tech:       TODO [#C] Learn "sed"
+  tech:       TODO [#C] Learn Dropbox command line & API
+  tech:       TODO [#C] Learn to write autogen.sh scripts
+  todo:       TODO [#C] NHL Sports Forecaster
+  todo:       TODO [#C] Hockey Abstract 2016 Update
+  todo:       TODO [#C] Tune banjos and guitar
+  wbblog:     TODO [#C] Blog post about export feature
+  habits:     TODO [#C] Read at least 30 pages
+  habits:     TODO [#C] Check social media outlets, Hootsuite queue, etc.; post; manage followers; engage w/ followers (15m 3x/wk)
+  habits:     TODO [#C] Add users to email lists; send email update (30m 1x/week)
+  habits:     TODO [#C] Work on Anki decks (30m 1x/week)
